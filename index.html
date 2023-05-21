@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Swipper Tags
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--
+        fonts awesome
+    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--
+        css
+    -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!--
+        custom js
+    -->
+    
+
+
+    <title>Food Treep - Cooking made easy for you.</title>
+</head>
+
+<body>
+    <!--     Header   -->
+
+    <header>
+     <a href="#" class="logo"><img src="img/logo6.png"    alt="logo"></i> </a>
+   
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#dishes">Recipes</a>
+        <a href="#">Favorites</a>
+        <a href="#">About</a>
+
+    </nav>
+   <div class="icons">
+    <i class="fa fa-bars" id="menu-bars"></i>
+    <i class="fa fa-search" id="search-icon"></i>
+    <a href="#" class="fa fa-heart"></a>
+   </div>
+   
+    </header>
+    
+<!-- search form -->
+
+<form action="" id="search-form">
+    <input type="search" name="" placeholder="Look for recipe..." id="search-box">
+    <label for="search-box" class="fa fa-search"></label>
+    <i class="fa fa-times" id="close" ></i>
+</form>
+
+ <section class="home" id="home">
+
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper wrapper">
+            
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>FoodTreep Recipe </span>
+                    <h2>The Easiest Way 
+                    To Make Your 
+                    Favorite Meal</h2>
+                    <p>Discover 100+ recipes in your hand with the best recipe.
+                    
+                    With just few clicks, will help you find the easiest way to cook.</p>
+                    <a href="" class="btn-view-recipe"> Explore Recipe</a>                      
+                    
+                </div>
+
+                <div class="image">
+                    <img src="img/slide7.jpg" alt="spicy">
+                </div>
+            </div>
+
+
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span> </span>
+                    <h3>Explore the foodie in you.</h3>
+                    <p>Chefs from all over the world shares their own version of food they love to make.
+                       Try out some of the recipe and You can make your own version. 
+                    </p>
+                    <a href="" class="btn-view-recipe">Explore Recipe</a>                      
+
+                   <!-- <a href="" class="btn-view-recipe"><i class="fa-solid fa-eye"></i> View recipe</a>   -->                   
+                  <!--  <a href="" class="btn-add-favorites"> 
+                       <i class="fa fa-heart"> </i> Add Favorites
+                        </a>-->
+                </div>
+
+                <div class="image">
+                    <img src="img/slide5.jpg" alt="spicy">
+                </div>
+            </div>
+
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>  </span>
+                    <h3> Cooking is for the soul</h3>
+                    <p>Learning how to cook is a standout amongst the most critical abilities a man can have. Cook for yourself and figure out how to appreciate sound nourishments that you've constantly abhorred.</p>
+
+                    <a href="" class="btn-view-recipe">Explore Recipe</a> 
+                </div>
+
+                <div class="image">
+                    <img src="img/pizza.jpg" alt="spicy">
+                </div>
+            </div>
+
+
+
+
+        </div>
+        
+    <div class="swiper-pagination"></div>
+     
+     
+      <span></span>
+    </div>
+    </div>
+
+ </section>
+
+
+
+
+
+
+<!--  Dishes section -->
+<section class="dishes" id="dishes">
+
+    <h3 class="sub-heading">Dishes sample 1</h3>
+    <h1 class="heading">Popular Dishes sample 2</h1>
+
+        <div class="box-container">    
+            
+            <div class="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/noodle.jpg" alt="">
+
+                <h3>Tasty Food</h3>
+                <div class="ratings"> .... </div>
+
+                <span>$$$</span>
+                <a href="#" class="btn-add-favorites"></a>
+
+
+            </div>
+
+            <div class="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/slide5.jpg" alt="">
+
+                <h3>Tasty Food</h3>
+                <div class="ratings"> .... </div>
+
+                <span>$$$</span>
+                <a href="#" class="btn-add-favorites">Add to Favorites</a>
+
+
+            </div>
+
+
+        </div>
+
+</section>
+
+
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+<script>
+ var swiper = new Swiper(".home-slider", {
+    spaceBetween: 30,
+   centeredSlides: true,
+   autoplay: {
+     delay: 7500,
+     disableOnInteraction: false,
+   },
+    pagination: {
+     el: ".swiper-pagination",
+      clickable: true,
+   },
+    loop:true,
+   });
+
+   
+</script>
+  <script src="js/script.js"></script>   
+</body>
+</html>
