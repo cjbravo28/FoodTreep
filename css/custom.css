@@ -284,11 +284,33 @@ header .icons #menu-bars{
 /* Dishes image sizing*/
 
 .dishes .box-container .box img{
-    width: 39%;
-    height: 60%;
+    width: 30%;
+    height: 17rem;
     border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.dishes .box-container .box h3{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+
+.dishes .box-container .box .ratings{
+    padding: 1rem 0;
 
 }
+
+
+.dishes .box-container .box span{
+    color: var(--green);
+    font-weight: bolder;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+
+
 
 .dishes .box-container .box .fa-heart,
 .dishes .box-container .box .fa-eye{
