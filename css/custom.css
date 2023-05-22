@@ -374,6 +374,15 @@ header .icons #menu-bars{
     section{
         padding:  2rem;
     }
+
+    .dishes .box-container .box img{
+        width: 20%;
+        height: 17rem;
+        border-radius: 1rem;
+        margin: 1rem 0;
+    }
+
+
 }
 
 @media (max-width:768px){
@@ -405,7 +414,7 @@ header .icons #menu-bars{
 
     #search-form #search-box{
         width: 90%;
-        margin 0 1rem;
+        margin: 0 1rem;
     }
 
     .home .home-slider .slide .content h3{
@@ -416,7 +425,7 @@ header .icons #menu-bars{
 }
 
 
-@media (max-width:991px){
+@media (max-width:891px){
     html{
         font-size: 50%;
     }
