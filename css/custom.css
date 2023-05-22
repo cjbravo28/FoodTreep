@@ -441,3 +441,12 @@ header .icons #menu-bars{
 
      
 }
+
+@media(max-width: 370px){
+    .dishes .box-container .box img{
+        width: 30%;
+        height: 9rem;
+        border-radius: 1rem;
+        margin: 1rem 0;
+    }
+}
