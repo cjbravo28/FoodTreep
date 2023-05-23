@@ -284,7 +284,7 @@ header .icons #menu-bars{
 /* Dishes image sizing*/
 
 .dishes .box-container .box img{
-    width: 30%;
+    width: 20rem;
     height: 17rem;
     border-radius: 1rem;
     margin: 1rem 0;
@@ -376,7 +376,7 @@ header .icons #menu-bars{
     }
 
     .dishes .box-container .box img{
-        width: 20%;
+        width: 60%;
         height: 17rem;
         border-radius: 1rem;
         margin: 1rem 0;
