@@ -47,7 +47,7 @@ section:nth-child(even){
     color: var(--black);
     font-size: 3rem;
     padding-bottom: 2rem;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 
@@ -438,6 +438,83 @@ header .icons #menu-bars{
 
 
 }
+
+
+
+/*SEARCH BAR RECIPES hmtl*/
+
+.containerSearch{
+    width: 100%;
+    height: 20vh;
+    background: #f7dcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerSearch form {
+    background: #fff;
+    width: 600px;
+    height: 50px;
+    display: flex;
+}
+
+ .containerSearch  form input{
+    flex: 1;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+
+}
+
+ .containerSearch form button{
+    background: var(--green);
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width:891px){

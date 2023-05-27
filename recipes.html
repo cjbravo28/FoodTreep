@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Swipper Tags
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--
+        fonts awesome
+    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--
+        css
+    -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!--
+        custom js
+    -->
+    
+
+
+    <title>Food Treep - Cooking made easy for you.</title>
+</head>
+
+<body>
+    <!--     Header   -->
+
+    <header>
+     <a href="index.html" class="logo"><img src="img/logo6.png"    alt="logo"></i> </a>
+   
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="recipes.html"  class="active">Recipes</a>
+        <a href="#">Favorites</a>
+        <a href="#">Meal Suggestion</a>
+        <a href="#">Kitchen Tool</a>
+
+
+    </nav>
+   <div class="icons">
+    <i class="fa fa-bars" id="menu-bars"></i>
+    <i  class="fa fa-search" id="search-icon"> </i>
+    <a href="#searchDiv" class="fa fa-heart"></a>
+   </div>
+   
+    </header>
+    
+<!-- search form -->
+
+<form  id="search-form">
+    <input type="search" name="" placeholder="Look for recipe..." id="search-box">
+    <label for="search-box" class="fa fa-search"></label>
+    <i class="fa fa-times" id="close" ></i>
+</form>
+
+<section id="searchDiv" class="sDv">
+
+
+</section>
+
+
+<div class="containerSearch">
+    <div class="searchDesignForm">
+
+
+    <form  id="searchForm">
+        <input type="text" id="userI" placeholder="What are you looking for?"  required>
+        
+        <button type="submit" id="mySearchBtn">Search</button>
+    </form>
+
+
+    </div>
+
+ <section class="home" id="home">
+
+    
+    </div>
+   
+
+ </section>
+
+
+
+
+
+
+<!--  Dishes section -->
+<div class="dishes" id="dishes">
+
+    <h3 class="sub-heading">Dishes sample 1</h3>
+    <h1 class="heading">Popular Dishes sample 2</h1>
+
+            
+             <!-- <div class="box" id="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/noodle.jpg" alt="">
+
+                <h3>Spicy Noodles</h3>
+                <div class="ratings"> .... </div>
+
+                <span>Asian</span><br>
+                <a href="#" class="btn-add-favorites">View Video</a>
+
+
+            </div>
+
+            <div class="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/slide5.jpg" alt="">
+
+                <h3>Tomato Pasta</h3>
+                <div class="ratings"> </div>
+
+                <span>Asian</span><br>
+                <a href="#" class="btn-add-favorites">View Video</a>
+
+
+            </div>
+
+
+
+            <div class="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/sushi2.jpg" alt="">
+
+                <h3>Pizza</h3>
+                <div class="ratings"> .... </div>
+
+                <span>Western</span><br>
+                <a href="#" class="btn-add-favorites">View Video</a>
+
+
+            </div>
+
+
+
+            <div class="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/sushi.jpg" alt="">
+
+                <h3>Sushi</h3>
+                <div class="ratings"> .... </div>
+
+                <span>Asian</span><br>
+                <a href="#" class="btn-add-favorites">View Video</a>
+
+
+            </div>
+
+            <!--SEARCH BAR-->
+content
+
+                <!-- <div class="box">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-eye"></a>
+
+                <img src="img/sushi2.jpg" alt="">
+
+                <h3>Pizza</h3>
+                <div class="ratings"> .... </div>
+
+                <span>Western</span><br>
+                <a href="#" class="btn-add-favorites">View Video</a>
+
+
+                 </div> --> 
+
+             
+
+       
+
+    </div>
+
+    <div class="box-container" id="container">    
+         
+    </div>
+
+
+
+
+
+<script>
+
+
+//                        declare variables                 //
+const mySubmit = document.querySelector('#mySearchBtn');
+const searchBar = document.querySelector('#userI');
+
+//const mealEl = document.getElementById('box');
+const form = document.querySelector('#searchForm');
+const resultHeading = document.getElementById('dishes');
+const single_content = document.getElementById('container');
+
+// form.addEventListener('submit', async function(e){
+//     const searchTerm = searchBar.value;
+
+//     console.log(searchTerm);
+// })
+
+//mysearchBtn.addEventListener("submit", ()=>{
+//     let user = document.getElementById('#userInput').value;
+     
+
+//     let mealAPI = fetch(`www.themealdb.com/api/json/v1/1/search.php?s=${user}`
+//     );
+
+//     mealAPI.then((getData)=>{
+//         return getData.json();
+//     })
+//     .then((sendData)=>{
+//         console.log(sendData)
+//     })
+
+// });
+
+
+// function searchMeal(e){
+//     e.preventDefault();
+
+
+//     //clear single meal
+//     single_mealEl.innerHTML="";
+
+//     //get search Meal
+
+//     console.log(searchBar);
+
+//     alert("HEllo!!!");
+// }
+
+function searchMeal(e){
+   e.preventDefault();
+   single_content.innerHTML = '';
+   
+
+    //get search Meal
+    const term = searchBar.value;
+
+    //check if input is empty
+console.log(term);
+
+
+    if(term.trim()){
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
+            .then((res)  => res.json()
+            )
+            .then((data) => {
+                resultHeading.innerHTML = `<h3 class="sub-heading">Search Results</h3> <br>
+                <h1 class="heading">You are looking for <i> ${term} </i></h1>`;
+                console.log(data);
+
+                
+                if(data.meals === null){
+                    resultHeading.innerHTML = `<h3 class="sub-heading">Search Results</h3> <br>
+                <h1 class="heading">There are no results for <i> ${term} </i> </h1>`;
+                }else{
+                    
+                     
+                data.meals.forEach(
+                        (meal) => { 
+                             
+                     var mealName = `${meal.strMeal}`;
+                     console.log(mealName);
+                     single_content.innerHTML =  `<p> ${meal.strMeal} </p>`
+                     const box = document.createElement("div")
+                     box.classList.add("box")
+                     box.innerHTML = `<p> ${meal.strMeal} </p>`;
+
+                 
+        }
+            
+            
+            );
+
+                    console.log("it went here too");
+                }
+                
+             } );
+
+
+
+            }
+    
+}
+
+
+form.addEventListener('submit', searchMeal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</script>
+  <script src="js/script.js"></script>  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.4.0/jquery.json.min.js"></script>  -->
+  
+</body>
+</html>
