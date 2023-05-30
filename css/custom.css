@@ -444,6 +444,8 @@ header .icons #menu-bars{
 /*SEARCH BAR RECIPES hmtl*/
 
 .containerSearch{
+    
+    margin-top: 20px;
     width: 100%;
     height: 20vh;
     background: #f7dcdc;
@@ -457,6 +459,7 @@ header .icons #menu-bars{
     width: 600px;
     height: 50px;
     display: flex;
+    margin-left: 320px;
 }
 
  .containerSearch  form input{

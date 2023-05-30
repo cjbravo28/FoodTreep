@@ -20,7 +20,196 @@
     <!--
         custom js
     -->
+    <style>
+
+/* .dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+.dishes .box-container .box1{
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    border:  .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+/* Dishes image sizing*/
+
+/* .dishes .box-container .box1 img{
+    width: 20rem;
+    height: 17rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.dishes .box-container .box1 h3{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+
+.dishes .box-container .box1 .ratings{
+    padding: 1rem 0;
+
+}
+
+
+.dishes .box-container .box1 span{
+    color: var(--green);
+    font-weight: bolder;
+    margin-left: 1rem;
+    font-size: 2rem;
+} */  
+ 
+/* .meals .box2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem, 1fr));
+    gap: 1.5rem;
+}
+
+.meals .box2 .box1{
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    border:  .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.meals .box1 img{
+    width: 30rem;
+    height: 27rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+ } */
+ 
+
+ .meals{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
     
+ }
+
+.meal1{
+    margin-top: 7rem;
+    margin-left: 5rem;
+    
+    cursor: pointer;
+    position: relative;
+    height: 280px;
+    width: 280px;
+    text-align: center;
+    justify-content: center;
+}
+
+.meal1 img{
+    width: 100%;
+    height: 100%;
+    border: 4px #f69916 solid;
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+}
+
+.meal-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+
+}
+
+.meal-info h3{
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.meal1:hover .meal-info{
+    opacity: 1;
+}
+
+
+
+
+
+
+@media(max-width:900px){
+    .meals{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .containerSearch .searchDesignForm{
+        margin-left: 0px;
+        margin-right: 250px;
+    }
+}
+
+
+@media(max-width:700px){
+
+    .meals{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .meal1{
+        height: 200px;
+        width: 200px;
+    }
+
+
+    .containerSearch .searchDesignForm{
+        margin-left: 10px;
+        margin-right: 280px;
+    }
+}
+
+
+@media(max-width:600px){
+
+
+    .containerSearch .searchForm{
+        margin-left: 0%;
+        margin-right: 50%;
+    }
+
+   .searchForm .insearch{
+        width: 50%;
+    }
+
+    .meals{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meal1{
+        height: 300px;
+        width: 300px;
+    }
+
+    .containerSearch .searchDesignForm{
+        margin-left: 7px;
+        margin-right: 300px;
+         
+    }
+}
+ </style>
 
 
     <title>Food Treep - Cooking made easy for you.</title>
@@ -63,26 +252,26 @@
 </section>
 
 
-<div class="containerSearch">
-    <div class="searchDesignForm">
+   <div class="containerSearch">
+      <div class="searchDesignForm">
 
 
-    <form  id="searchForm">
-        <input type="text" id="userI" placeholder="What are you looking for?"  required>
+      <form  id="searchForm">
+        <input type="text" class="insearch" id="userI" placeholder="What are you looking for?"  required>
         
         <button type="submit" id="mySearchBtn">Search</button>
-    </form>
+       </form>
 
 
     </div>
 
  <section class="home" id="home">
-
+</section>
     
     </div>
    
 
- </section>
+
 
 
 
@@ -90,11 +279,12 @@
 
 
 <!--  Dishes section -->
-<div class="dishes" id="dishes">
+<section class="dishes" id="dishes">
 
     <h3 class="sub-heading">Dishes sample 1</h3>
     <h1 class="heading">Popular Dishes sample 2</h1>
-
+<br>
+<div class="result-heading"></div>
             
              <!-- <div class="box" id="box">
                 <a href="#" class="fa fa-heart"></a>
@@ -179,14 +369,17 @@ content
                  </div> --> 
 
              
-
+                 <!-- <div class="box-container" id="container">    
+         
+                 </div> -->
        
 
-    </div>
+</section>
 
-    <div class="box-container" id="container">    
-         
-    </div>
+<div class="meals" id="meals"> </div>
+
+<div class="single-meal" id="single-meal"> </div>
+    
 
 
 
@@ -203,7 +396,10 @@ const searchBar = document.querySelector('#userI');
 const form = document.querySelector('#searchForm');
 const resultHeading = document.getElementById('dishes');
 const single_content = document.getElementById('container');
+const res_head = document.getElementsByClassName('result-heading');
 
+const mealSearch = document.getElementById('meals');
+const mealsEl = document.getElementById('single-meal');
 // form.addEventListener('submit', async function(e){
 //     const searchTerm = searchBar.value;
 
@@ -243,7 +439,7 @@ const single_content = document.getElementById('container');
 
 function searchMeal(e){
    e.preventDefault();
-   single_content.innerHTML = '';
+   mealSearch.innerHTML = '';
    
 
     //get search Meal
@@ -260,7 +456,7 @@ console.log(term);
             .then((data) => {
                 resultHeading.innerHTML = `<h3 class="sub-heading">Search Results</h3> <br>
                 <h1 class="heading">You are looking for <i> ${term} </i></h1>`;
-                console.log(data);
+                //console.log(data);
 
                 
                 if(data.meals === null){
@@ -274,31 +470,90 @@ console.log(term);
                              
                      var mealName = `${meal.strMeal}`;
                      console.log(mealName);
-                     single_content.innerHTML =  `<p> ${meal.strMeal} </p>`
+                    
                      const box = document.createElement("div")
-                     box.classList.add("box")
-                     box.innerHTML = `<p> ${meal.strMeal} </p>`;
+                     box.classList.add("meal1")
+                     box.innerHTML =  ` 
+                
+               <div class="box1">          
+                <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+
+                
+                <div class="meal-info" data-mealID="${meal.idMeal}">
+                    <h3>${meal.strMeal}</h3>
+                    <br><span>${meal.strArea}</span>
+                </div>
+
+                
+                <a href="#" class="btn-add-favorites">View Recipe</a>
+                </div>
+
+                  `
+                  mealSearch.appendChild(box)
+                     
 
                  
         }
             
             
-            );
+            ) ;
 
-                    console.log("it went here too");
+                     
                 }
                 
              } );
 
 
 
+            }else{
+                alert("You must enter something!");
             }
     
 }
 
 
-form.addEventListener('submit', searchMeal);
+//fetch meal by id
 
+// function getMealById(mealID){
+//     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`
+//     ).then(res => res.json())
+//     .then(data => {
+//         console.log(data);
+
+//         const meal = data.meals[0];
+//         addMealToDOM(meal);
+
+//     });
+// }
+
+
+//add meal to DOM
+
+// function addMealToDOM(meal){
+
+// }
+
+
+
+
+
+
+form.addEventListener('submit', searchMeal);
+// mealSearch.addEventListener('click', (e) => {
+    
+//     const mealInfo = e.path.find((item) => {
+//         if(item.classList){
+//                 return item.classList.contains("meal-info");
+//         }else{
+//             return false;
+//         }
+//     });
+//     if(mealInfo){
+//         const mealID = mealInfo.getAttribute("data-mealid");
+//         getMealById(mealID);
+//     }
+
+// })
 
 
 

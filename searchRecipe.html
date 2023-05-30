@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meal App | Find Your Meal</title>
+  <!-- link to fontawsome -->
+  <script src="https://kit.fontawesome.com/14097a442a.js" crossorigin="anonymous"></script>
+  <!-- link to bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <!-- link to css --> 
+
+  <link rel="stylesheet" href="css/custom.css">
+
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color:#212529;
+    color: white;
+} */
+
+/* header heading section */
+#heading {
+    margin-top: 100px;
+}
+
+
+/* header navbar */
+#nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* header search bar section */
+#search-bar {
+    max-width: 600px;
+}
+
+#search-bar input {
+    height: 50px;
+    border-radius: 20px;
+}
+
+
+/* meal card */
+#card {
+    background-color: #23442c;
+    padding: 10px;
+    color: rgb(241, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#card img {
+    border-radius: 50%;
+}
+
+
+/* meal details container */
+#meal-details{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#05401d ;
+    color: #fff;
+}
+#meal-header{
+    width: 70%;
+    margin: auto;
+}
+#meal-thumbail img{
+    height: 350px;
+    width: 360px;
+    border-radius: 50%;
+}
+#details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: bold;
+    margin-top: 10px;
+}
+
+
+#details h3{
+font-size: 35px;
+
+}
+#details h6{
+font-size: 15px;
+
+}
+
+#details h4{
+font-size: 18px;
+font-style: italic;
+}
+
+#details p{
+font-size: 13px;
+
+}
+
+#meal-instruction{
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    white-space: pre-line;
+    margin-left: 60px;
+    margin-right: 60px;
+    line-height: 2;
+}
+
+
+
+
+/* favourites offcanvus */
+#favourites-body{
+    background-color:#212529 ;
+}
+
+
+
+
+
+header .icons1 i .fav {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+ .icons1 i .fav:hover {
+    color: #fff;
+    background: var(--green);
+    transform: rotate(90deg);
+}
+
+
+
+header .icons1 #menu-bars{
+    display: none;
+}
+  </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+  <!-- full body div -->
+  <div id="full-body">
+
+    <!--full body header section -->
+    <div id="header" class="container-fulied">
+
+      <!-- header navbar -->
+      <div id="" class="navbar navbar-dark  fixed-top"  >
+        <div class="container-fluid">
+           
+          <header>
+            <a href="index.html" class="logo"><img src="img/logo6.png"    alt="logo"></i> </a>
+          
+           <nav class="navbar">
+               <a href="index.html"  style="text-decoration: none; margin-right: 1rem;">Home</a>
+               <a href="searchRecipe.html" class="active" style="text-decoration: none; margin-right: 1rem;">Recipes</a>
+               <a href="fav.html" style="text-decoration: none;margin-right: 1rem;">Favorites</a>
+               <a href="#" style="text-decoration: none;margin-right: 1rem;">Meal Suggestion</a>
+               <a href="#" style="text-decoration: none;">Kitchen Tool</a>
+       
+       
+           </nav>
+          <div class="icons1">
+           <i class="fa fa-bars" id="menu-bars"></i>
+           
+           <i  class="fav" id="search-icon" style="font-size: 18px;"> <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" onclick="showFavMealList()" >
+            <span class="fa fa-heart" ></span>
+          </button></i>
+           
+            
+            
+        
+        </a>
+          </div>
+          
+           </header>  
+          
+          
+
+
+
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header bg-success">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:white ;">
+                Favourites
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!--this div is for show favourite meals -->
+            <div id="favourites-body" class="offcanvas-body d-flex justify-content-center flex-wrap">
+              <div class="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- header heading section-->
+      <div id="heading" class="container text-center">
+        <h1>Craving for something?</h1>
+      </div>
+
+      <!-- header search bar section -->
+      <div id="search-bar" class="container text-center mt-5" onkeyup="showMealList()">
+        <input type="search" id="my-search" class="form-control" placeholder="Look for recipe.." />
+      </div>
+
+      <!-- text -->
+      <div id="heading-text" class="mt-3 text-center">
+        <h5>Your Search Results:</h5>
+      </div>
+
+    </div>
+
+    <!--full body main section-->
+    <div id="main" class="d-flex justify-content-around container flex-wrap mt-4">
+    </div>
+
+  </div>
+
+  <!-- link to bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!-- link to js -->
+  <script src="js/script2.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
