@@ -188,7 +188,7 @@ header .icons1 #menu-bars{
                <a href="searchRecipe.html" style="text-decoration: none; margin-right: 1rem;">Recipes</a>
                <a href="fav.html" class="active"  style="text-decoration: none;margin-right: 1rem;">Favorites</a>
                <a href="#" style="text-decoration: none;margin-right: 1rem;">Meal Suggestion</a>
-               <a href="#" style="text-decoration: none;">Kitchen Tool</a>
+               <a href="ktool.html" style="text-decoration: none;">Kitchen Tool</a>
        
        
            </nav>
@@ -293,7 +293,7 @@ async function showFavMealList() {
         for (let index = 0; index < arr.length; index++) {
             await fetchMealsFromApi(url,arr[index]).then(data=>{
                 html += `
-                <div id="card" class="card mb-3" style="width: 20rem;">
+               <div id="card" class="card mb-3" style="width: 20rem;">
                     <img src="${data.meals[0].strMealThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${data.meals[0].strMeal}</h5>
