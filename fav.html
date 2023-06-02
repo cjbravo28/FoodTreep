@@ -192,20 +192,11 @@ header .icons1 #menu-bars{
        
        
            </nav>
-          <div class="icons1">
-           <i class="fa fa-bars" id="menu-bars"></i>
-           <a href="searchRecipe.html" class="fa fa-search" id="search-icon" style="text-decoration: none; font-size: 18px;"> </a>
-
-           <!-- <i  class="fav" id="search-icon" > <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" onclick="showFavMealList()" >
-            <span class="fa fa-heart" ></span>
-          </button></i> -->
-           
+           <div class="icons" >
+            <i class="fa fa-bars" id="menu-bars"></i>
+            <a href="searchRecipe.html" class="fa fa-search" id="search-icon" style="text-decoration: none;"></a>
             
-            
-        
-         
-          </div>
+           </div>
           
            </header>  
           
@@ -309,6 +300,37 @@ async function showFavMealList() {
     }
     document.getElementById("main2").innerHTML=html;
 }
+
+
+
+
+
+
+//its adds and remove meals to favourites list
+function addRemoveToFavList(id) {
+    let arr=JSON.parse(localStorage.getItem("favouritesList"));
+    let contain=false;
+    for (let index = 0; index < arr.length; index++) {
+        if (id==arr[index]) {
+            contain=true;
+        }
+    }
+    if (contain) {
+        let number = arr.indexOf(id);
+        arr.splice(number, 1);
+        alert("You removed the meal from the list.");
+        location.reload();
+    } else {
+        arr.push(id);
+        alert("Meal added to favourites list.");
+    }
+    localStorage.setItem("favouritesList",JSON.stringify(arr));
+    showMealList();
+    showFavMealList();
+}
+
+
+
 
 
 
