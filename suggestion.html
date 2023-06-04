@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Meal Suggestion</title>
+  <meta name="description" content="The Hungry Recipes app let's you browse recipes provided by TheMealDB API">
+  <meta name="author" content="Nitin Chandran Nair">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--
+        fonts awesome
+    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--
+        css
+        
+    -->
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+  <link rel="stylesheet" href="css/sug.css">
+  <link rel="stylesheet" href="css/sugg.css">
+  <link rel="stylesheet" href="css/suggest.css">
+  <link rel="stylesheet" href="css/footer.css">
+    <!--
+        custom js
+    -->
+    <!-- theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+
+    <link rel="shortcut icon" href="img/logo6.png">
+</head>
+<body>
+    <!--     Header   -->
+
+    <header>
+     
+        <a href="index.html" class="logo"><img src="img/logo6.png"    alt="logo"></i> </a>
+        <nav class="main">
+      
+          <a href="index.html" >Home</a>
+          <a href="searchRecipe.html">Recipes</a>
+          <a href="fav.html">Favorites</a>
+          <a href="suggestion.html" class="active">Meal Suggestion</a>
+          <a href="ktool.html">Kitchen Tool</a>
+  
+        </nav>
+   
+       
+        <div class="icons">
+          <i class="fa fa-bars" id="menu-bars"></i>
+          <a href="searchRecipe.html" class="fa fa-search" id="search-icon"> </a>
+           
+         </div>
+  
+       </header>
+       
+   <!-- search form -->
+   
+   <form action="" id="search-form">
+       <input type="search" name="" placeholder="Look for recipe..." id="search-box">
+       <label for="search-box" class="fa fa-search"></label>
+       <i class="fa fa-times" id="close" ></i>
+   </form>
+   
+   <section id="searchDiv" class="sDv">
+   
+   
+   </section>
+
+
+      <section id="landing">
+          <div class="container">
+              <div class="row">
+                  <div class="twelve columns">
+                   
+                        <div class="row">
+                          <div class="eight columns">
+                               <span class="multiText">Confused what to cook?
+                              </span>
+                          </div>
+                          <div class="four columns">
+                              <img src="img/chef.svg" class="u-max-full-width chefimg" />
+                              <a class="button btnRandomRecipe" href="#random" title="Show a random recipe" onclick="clear()">Random Recipe</a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="eight columns">
+                            <ul class="navbar-list u-full-width" style="text-align:center;" id="NavBarCategory">
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </section>
+
+      <section id="mealCardsSection">
+        <div class="container" style="display:none;">
+            <div class="row">
+                <div class="four columns">
+                </div>
+                <div class="row">
+                  <div class="eight columns">
+                    <div class="row">
+                      <div class="eight columns" style="text-align:center;font-size:20px">
+                        <p>You searched for: <span id="userInput"></span></p>
+                      </div>
+                      <div class="four columns" style="text-align:right">
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row mealCards d-flex"><div class="loader"></div></div>
+        </div>
+      </section>
+      
+      <section id="random">
+  <br/>
+        <div class="container">
+          <div class="row">
+              <div class="four columns">
+                <h3 class="heading" id="dynamicTitle">Random</h3>
+              </div>
+              <div class="eight columns" style="text-align:left;">
+                 <img src="img/cooking.png" class="cooking" alt="cooking" />
+                <button id="dynamicButton" class="button btnRandomRecipe" title="Show another random recipe">Randomize</button>
+               </div> 
+          </div>
+          <div class="row">
+            <div class="four columns mealImg" id="randomMealImg"><div class="loader"></div></div>
+            <div class="eight columns mealMetadata" id=randomMealMetadata></div>
+          </div>
+          <div class="row">
+            <div class="twelve columns mealInstructions" id="randomMealInstructions"></div>
+          </div>
+        </div>
+      </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>  
+<script src="js/suggestion.js"></script>
+</html>

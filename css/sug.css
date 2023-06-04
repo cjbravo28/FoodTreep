@@ -1,0 +1,90 @@
+*{box-sizing:border-box}
+html,body{scroll-behavior:smooth}
+body{display:flex;flex-direction:column;flex-wrap:nowrap}
+
+body{background-color:whitesmoke;color:rgb(248, 241, 241)}
+.button:hover{background-color:#049c49}
+.loader{outline: 0 solid #ca0f0f}
+
+
+.button{font-weight:bold;font-size:13px;border:1px solid rgb(248, 242, 242)}
+.button:hover{transition:all 500ms ease;color:white}
+.button,.card{box-shadow: 2px 6px 15px rgba(0,0,0,0.1)}
+
+
+.card{border-radius:7px;margin:10px}
+.card img{width:100%;max-height:150px}
+.card-body{padding:5px 15px}
+.cardTitle{margin-bottom:5px}
+.mealCards{text-align:center}
+.mealCards .columns{margin-left:0}
+
+
+.chefimg{position:absolute;height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
+
+
+.d-flex{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:middle}
+
+#landing .row:first-child{display: flex; align-items: center;} 
+section#landing .row .chefimg{top:26px; left:160px; position: relative;}
+
+
+.mealMetadata ul > li{margin:0;float:left;width:50%}
+.mealMetadata ul{margin-bottom:0}
+.mealMetadata a{font-size:13px}
+
+#dynamicButton{
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.mealMetadata span,.mealInstructions span{margin-right:5px;font-weight:bold;}
+.meal.strSource {font-size:10px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+.mealImg > img{height:100%;width:100%;border-radius:100%;box-shadow:0px 5px 15px rgba(0,0,0,0.2)}
+
+
+
+section#landing{display:flex;flex-direction:row;align-items:center;height:100vh}
+section#landing > .container{margin-top:-100px}
+section{height:auto}
+section#landing .chefimg{top:-20px;right:-3px}
+section#random .chefimg{top:5px;right:-14px}
+section#mealCardsSection .chefimg{top:-20px;right:22px}
+
+
+
+/* Media queries */
+   
+/* @media (min-width: 750px) {
+    .navbar-list {list-style:none}
+}
+@media (min-width: 750px) {
+    .navbar-item {position:relative;display:inline}
+}
+@media (min-width: 750px){
+    .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;text-decoration: none;color:black}
+}
+@media (min-width: 750px){
+    .navbar-link-category {text-transform: uppercase;font-size: 10px;font-weight: 500;letter-spacing: .1rem;margin-right: 10px;text-decoration: none;color:black}
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .nav-list-category {
+      display:none;
+    }
+  } */
+
+
+#navList{list-style:none;margin-bottom:0;display:flex;justify-content:space-evenly}
+#navItem{position:relative;display:inline}
+#navLink{text-transform:uppercase;font-size:90vw;font-weight:600;letter-spacing:.10rem;text-decoration:none;color:#6e2222}
+.chefimg{height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
+#about-section{height:80vh;padding-top:20vh;}
+.brand{font-size:5vw;font-weight:700}
+@media (min-width:440px){
+.brand{font-size:3vw}
+.navbar-link{font-size:1.5vw}}
+@media (max-width:800px){
+.heading{margin:20px;width:80vw}}
+#errorMessageContainer{display: none; background: #679f38; text-align: center;height: 100px; color: white; justify-content: center; align-items: center;}
+#errorMessageText{line-height: 100px; padding: 0px; margin: 0 40px 0 0;}
+#errorMessageBtn{margin: 0px; color: white; border: 1px solid white;}

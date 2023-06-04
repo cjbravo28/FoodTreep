@@ -17,6 +17,7 @@
         css
     -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!--
         custom js
     -->
@@ -207,7 +208,7 @@
         <a href="index.html" class="active">Home</a>
         <a href="searchRecipe.html">Recipes</a>
         <a href="fav.html">Favorites</a>
-        <a href="#">Meal Suggestion</a>
+        <a href="suggestion.html">Meal Suggestion</a>
         <a href="ktool.html">Kitchen Tool</a>
 
 
@@ -266,9 +267,9 @@
                     <span> </span>
                     <h3>Explore the foodie in you.</h3>
                     <p>Chefs from all over the world shares their own version of food they love to make.
-                       Try out some of the recipe and You can make your own version. 
+                      Randomize. Try out some of the recipe and You can make your own version. 
                     </p>
-                    <a href="#dishes" class="btn-view-recipe">Explore Recipe</a>                      
+                    <a href="suggestion.html" class="btn-view-recipe">Explore Recipe</a>                      
 
                    <!-- <a href="" class="btn-view-recipe"><i class="fa-solid fa-eye"></i> View recipe</a>   -->                   
                   <!--  <a href="" class="btn-add-favorites"> 
@@ -286,9 +287,11 @@
                 <div class="content">
                     <span>  </span>
                     <h3> Cooking is for the soul</h3>
-                    <p>Learning how to cook is a standout amongst the most critical abilities a man can have. Cook for yourself and figure out how to appreciate sound nourishments that you've constantly abhorred.</p>
+                    <p>Learning how to cook is a standout amongst the most critical abilities a man can have. Cook for yourself and figure out how to appreciate sound nourishments that you've constantly abhorred.
+                        Check out our tool that will help you make your cooking cooking easy! 
+                    </p>
 
-                    <a href="#dishes" class="btn-view-recipe">Explore Recipe</a> 
+                    <a href="ktool.html" class="btn-view-recipe">Explore Recipe</a> 
                 </div>
 
                 <div class="image">
@@ -373,6 +376,7 @@
     <div class="screen recipe-screen hidden">
         <div class="back-btn">&#10005;</div>
         <div class="thumbnail">
+             
             <img>
         </div>
         <div class="details">
@@ -385,7 +389,11 @@
                 <h4>Instructions</h4>
                 <ol></ol>
             </div>
+
+
         </div>
+
+        <div class="vid"> <a target="_blank"> Watch Video</a> </div>
     </div>
 </div>
 
@@ -502,6 +510,41 @@
 
 
 
+
+
+
+
+
+<section class="footer">
+    <div class="social"> 
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+
+    <ul class="list">
+<li>
+    <a href="#">About</a>
+</li>
+
+<li>
+    <a href="#">Contact</a>
+</li>
+
+<li>
+    <a href="#">Newsletter</a>
+</li>
+
+
+<p class="copyright">
+    MP2 Team 3 @2023
+</p>
+
+    </ul>
+
+</section>
+
  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 
@@ -584,6 +627,8 @@ async function getRecipesOfCatagory(catagory){
                 <div class="details">
                     <h2> ${recipes[i].strMeal}</h2>
                 </div>
+
+               
             `;
             screen.main.querySelector(".recipe-list").appendChild(div);
         }
@@ -596,6 +641,7 @@ async function showFullRecipe(recipeId){
     screen.recipe.querySelector(".back-btn").addEventListener("click", function(){
             screen.recipe.classList.add("hidden");
             screen.main.classList.remove("hidden");
+            screen.recipe.querySelector(".thumbnail iframe").src = "";
             screen.recipe.querySelector(".thumbnail img").src = "";
             screen.recipe.querySelector(".details h2").innerText = "";
             screen.recipe.querySelector(".details ul").innerHTML = "";
@@ -606,6 +652,7 @@ async function showFullRecipe(recipeId){
         let data = await res.json();
         let recipe = data.meals[0];
 
+        
         screen.recipe.querySelector(".thumbnail img").src = recipe.strMealThumb;
         screen.recipe.querySelector(".details h2").innerText = recipe.strMeal;
 
@@ -628,6 +675,10 @@ async function showFullRecipe(recipeId){
                 screen.recipe.querySelector(".details ol").appendChild(li);
 
             }
+
+            screen.recipe.querySelector(".vid a").href = recipe.strYoutube;
+
+
     }catch(msg){}
 }
 
