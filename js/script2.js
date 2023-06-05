@@ -85,7 +85,7 @@ async function showMealDetails(id) {
     await fetchMealsFromApi(url,id).then(data=>{
         html += `
           <div id="meal-details" class="mb-5">
-            <div id="meal-header" class="d-flex justify-content-around flex-wrap">
+            <div id="meal-header" class="d-flex justify-content-around ">
               <div id="meal-thumbail">
                 <img class="mb-2" src="${data.meals[0].strMealThumb}" alt="" srcset="">
               </div>
@@ -93,7 +93,7 @@ async function showMealDetails(id) {
                 <h3>${data.meals[0].strMeal}</h3><br>
                 <h6>Category : ${data.meals[0].strCategory}</h6>
                 <h6>Area : ${data.meals[0].strArea}</h6><br>
-                <h4>** Ingredients **</h4><br>
+                <h4> Ingredients </h4><br>
                 <p> ${data.meals[0].strIngredient1} ~ ${data.meals[0].strMeasure1} </p>
                 <p> ${data.meals[0].strIngredient2} ~ ${data.meals[0].strMeasure2} </p>
                 <p> ${data.meals[0].strIngredient3} ~ ${data.meals[0].strMeasure3} </p>
@@ -108,10 +108,16 @@ async function showMealDetails(id) {
               <h5 class="text-center" style="font-size: 18px;">Instruction :</h5>
               <p>${data.meals[0].strInstructions}</p>
             </div>
-            <div class="text-center">
-              <a href="${data.meals[0].strYoutube}" target="_blank" class="btn btn-outline-light mt-3" style="font-size: 14px; background: red;">Watch Video</a>
-            </div>
+            
+
           </div>
+          <div class="text-center">
+              <a href="${data.meals[0].strYoutube}" target="_blank" class="btn btn-outline-light mt-3" style="font-size: 14px; background: red;"> <i class="fa fa-youtube-play" aria-hidden="true"></i>
+               Watch Video</a>
+            </div>
+
+          <div class="pr">  <a href="javascript:void(0);" onclick="printPageArea('printM')" class="btn btn-outline-light mt-3" style="font-size: 14px; background: green;"> <i class="fa fa-print" aria-hidden="true"></i> Print</a>
+            </div>
         `;
     });
     document.getElementById("main").innerHTML=html;
