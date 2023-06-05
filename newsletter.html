@@ -166,8 +166,10 @@ height: 95px;">
     emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
     .then(function(res){
         console.log("success", res.status);
-        alert("You have been successfully subscribed!");
-        location.reload();
+         
+         alert('You have been successfully subscribed!') 
+        window.location.reload();
+        // location.reload();
     })
    }
 </script>
