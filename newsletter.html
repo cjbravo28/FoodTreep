@@ -70,7 +70,8 @@
         <div class="iconNew"><i class="far fa-envelope"></i></div>
         <div class="newContent">
              <p>Subscribe to our web page and get the latest updates.</p>
-    
+    <br> <p style="font-size: 12px; font-weight: 600; text-transform: none;  color: green;" id="message"></p>
+    <p style="font-size: 12px; font-weight: 600; text-transform: none; color: red;" id="errors"></p>
         </div>
     
         <form action="#" class="newslet">
@@ -163,14 +164,39 @@ height: 95px;">
         message:msg1,
         to_email:document.getElementById("toEmail").value,
     };
-    emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
-    .then(function(res){
-        console.log("success", res.status);
+
+    var fname = document.getElementById('toName').value;
+    var femail = document.getElementById('toEmail').value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(fname.trim().length!==0 && femail.match(mailformat) ){
+        
+        emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
+             .then(function(res){
+              console.log("success", res.status);
          
-         alert('You have been successfully subscribed!') 
-        window.location.reload();
+                 alert('You have been successfully subscribed!') ;
+         
+        //window.location.reload();
         // location.reload();
+
+                  document.getElementById('toName').value='';
+                  document.getElementById('toEmail').value='';
+                  document.getElementById('message').innerText= 'Email sent. Please check your email.';
+                  document.getElementById('errors').innerText = '';
     })
+
+
+    }else{
+        document.getElementById('errors').innerText = 'Please enter a valid information.';
+        document.getElementById('message').innerText = '';
+    }
+
+
+
+    
+
+    
    }
 </script>
 
