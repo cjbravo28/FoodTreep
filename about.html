@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Swipper Tags
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--
+        fonts awesome
+    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--
+        css
+    -->
+    <link rel="stylesheet" href="css/about.css">
+    
+    <!--
+        custom js
+    -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+
+
+    <title>About Us</title>
+
+
+    <style>
+
+.wrappers{
+    
+
+    margin-top: 10%;
+    
+    box-sizing: border-box;
+}
+
+.wrappers h1{
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.team{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+}
+
+
+.team .team_member{
+    background: #bf5e0a;
+    margin: 10px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: #d5d2d2;
+    margin-top: 30px;
+    position: relative;
+}
+
+.team .team_member h3{
+    color: #d5d2d2;
+    font-size: 20px;
+    margin-top: 90px;
+    
+     
+}
+
+.team .team_member p.role{
+    color: #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 12px 0;
+    margin-bottom: 30px;
+}
+
+.team .team_member p{
+    font-size: 13px;
+}
+
+
+.team .team_member .team_img {
+    /* width: 100px;
+    height: 100px;
+    border-radius: 50%; */
+    width: 250px; height: 100px; 
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #bf5e0a ;
+    border-radius: 50%;
+ }
+
+
+ .team .team_member .team_img img{
+    width: 140px; 
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+ }
+
+ 
+
+
+
+    </style>
+</head>
+
+<body>
+    <!--     Header   -->
+
+    <header>
+     <a href="index.html" class="logo"><img src="img/logo6.png"    alt="logo"></i> </a>
+   
+     <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="searchRecipe.html">Recipes</a>
+        <a href="fav.html">Favorites</a>
+        <a href="suggestion.html">Meal Suggestion</a>
+        <a href="ktool.html">Kitchen Tool</a>
+
+
+    </nav>
+   <div class="icons">
+    <i class="fa fa-bars" id="menu-bars"></i>
+    <a href="searchRecipe.html" class="fa fa-search" id="search-icon"> </a>
+     
+   </div>
+   
+    </header>
+    
+<!-- search form -->
+
+<form action="" id="search-form">
+    <input type="search" name="" placeholder="Look for recipe..." id="search-box">
+    <label for="search-box" class="fa fa-search"></label>
+    <i class="fa fa-times" id="close" ></i>
+</form>
+
+<div id="main">
+  
+    <div class="about-us">
+        <h3 class="title">ABOUT US</h3>
+    <br/>
+    <div class="food">
+         
+        <h5 class="treep"> Food Treep is here to help you cook delicious meals with less stress and more joy. We believe that it doesn't have to be expensive or complicated to prepare good meals.
+          Food Treep shares incredible food and dessert recipes that will make you become the master of your kitchen. It is a one stop destination for every foodie who is looking for latest food,
+          recipes based on various cuisines, ingredients, categories and videos and kitchen tools.</h5> 
+        </div>
+        
+    </div>
+   
+</div>
+
+
+
+<div style="margin-top: 10px;"></div> 
+<div class="wrappers" style="margin-top: 2%; margin-bottom: 65px;"  > 
+    <h1 style="text-align: center; font-size: 30px;">Meet Our Team</h1>
+
+    <div class="team">
+        <div class="team_member">
+
+            <div class="team_img" >
+                <img src="img/team1.jpg" alt="" >
+            </div>
+            <h3>Paul John Lacorda</h3>
+            <p class="role">Web Dev</p>
+            <p>I’m a software engineer who loves creating websites and apps. I believe that you have to be able to see the big picture when you’re building something, and that’s why I like to work with a team. It’s also why I love working in groups where everyone has a voice, but we all work together toward the same goal—to make your site better than you could ever do on your own.</p>
+       
+        </div>
+
+        <div class="team_member">
+
+            <div class="team_img">
+                <img src="img/team2.jpg" alt="">
+            </div>
+             <h3>Christine Joyce Bravo</h3>
+             <p class="role">Web Dev</p>
+             <p>I’m a very driven and motivated individual who believes that each day should be challenging and rewarding. When I’m not working on my projects or helping others, you can find me spending time with friends or family.
+
+                I have always been interested in learning new technologies and languages, so much so that it has become a passion of mine. Because of this, I spend a lot of time reading books or tutorials related to programming languages and platforms like PHP and . NET.</p>
+           
+            </div>
+
+        <div class="team_member">
+            <div class="team_img">
+                <img src="img/team3.jpg" alt="">
+            </div>
+            <h3>Nylce Joy Grejarte</h3>
+             <p class="role">Web Dev</p>
+             <p>I’m a web developer who loves to make beautiful things.
+
+                I love building websites that are easy to use and can be accessed by anyone. I also love making my clients happy with their site’s performance, so they can see it on any device they have.</p>
+           
+        </div>
+    </div>
+ </div>
+        
+</div>
+
+
+
+
+ 
+
+
+
+
+<div class="footer" style="position: relative;
+padding: 10px 10px 0px 10px;
+bottom: 0;
+width: 100%;
+/* Height of the footer*/
+height: 110px;">
+
+
+    <!-- <div class="news">
+        <label for="toggle" class="cancel-btn"><i class="fas fa-times"></i></label>
+        <div class="iconNew"><i class="far fa-envelope"></i></div>
+        <div class="newContent">
+             <p>Subscribe to our web page and get the latest updates.</p>
+    
+        </div>
+    
+        <form action="#" class="newslet">
+            <div class="field">
+                <input type="text" placeholder="Email Address" required>
+            </div>
+            <div class="field btn">
+                <input type="submit" value="Subscribe Now">
+            </div>
+        </form>
+    
+        <div class="txt">We do not share your information.</div>
+    </div> -->
+
+
+
+    <div class="social"> 
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+
+    <ul class="list">
+<li>
+    <a href="about.html" style="opacity:1;">About</a>
+</li>
+
+<li>
+    <a href="contact.html" >Contact</a> 
+</li>
+
+<li>
+    <!-- <input type="checkbox" id="toggle" >
+   <label for="toggle"> -->
+    <a href="newsletter.html">Newsletter</a>
+ 
+</li>
+
+
+<p class="copyright">
+    MP2 Team 3 @2023
+</p>
+
+    </ul>
+
+</div>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+<script src="js/script.js"></script>   
+</body>
+</html>
