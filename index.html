@@ -320,15 +320,61 @@
     <i class="fa fa-times" id="close" ></i>
 </form>
 
-<section id="searchDiv" class="sDv">
+<section id="searchDiv" class="sDv" style="margin-top: 100px; margin-bottom: 330px;">
+
+    <h3 class="sub-heading" style="font-size: 25px;">Welcome to Food Treep Recipe App</h3>
+    <p style="margin-top: 20px; font-size: 14px; text-transform: none; text-align: center;"> Subscribe to our Newsletter and be the first to get our latest updates. </p>
 
     
+<div class="center" style="margin-top:20px ;">
+        <button id="show-btn">Subscribe</button>
+</div>
+<div class="popup">
+    <div class="close-btn">&times;</div>
+    <div class="form1">
+        <h2>Subscribe to Newsletter</h2>
+        <div style="margin-left: 100px;">
+        <div class="iconNew" style=" height: 110px;
+        width: 110px;
+        background: #27ae60;
+        line-height: 110px;
+        border-radius: 50%;
+        font-size: 55px;
+        color: #fff;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;"><i class="far fa-envelope"></i></div>
+        </div>
+
+        <div id="message" style="font-size: 10px; font-weight: 600; color: green; text-align: center;" ></div>
+        <div id="errors" style="font-size: 10px; font-weight: 600; color: red; text-align: center;"></div>
+
+        <div class="form-element">
+            <label for="toName">What is your name?</label>
+            <input type="text" id="toName" placeholder="Enter your name..">
+        </div>
+
+
+        <div class="form-element1">
+            <label for="toEmail">How can we reach you?</label>
+            <input type="text" id="toEmail" placeholder="Enter your email..">
+        </div>
+<br>
+        <div class="form-element">
+            <button onclick="sendMail()">Subscribe Now</button>
+        </div>
+        
+    </div>
+</div>
 </section>
 
-
+ 
 
 
  <section class="home" id="home">
+
+
+
 
     <div class="swiper home-slider">
         <div class="swiper-wrapper wrapper">
@@ -427,10 +473,20 @@
 
 
 
+    <!--                         NEWS LETTER               -->
+    
 
 
 
-    <h3 class="sub-heading">Welcome!</h3>
+
+
+
+
+
+
+
+ <div style="margin-bottom: 4rem; margin-top: 3rem;">  </div>
+    
     <h1 class="heading">Find the right Recipe for you.</h1>
 
 
@@ -668,7 +724,9 @@
  <script src="js/print.js"></script>
  <script src="js/html2canvas.js"></script>
 
-
+ <script type="text/javascript"
+ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
 
 
 
@@ -690,6 +748,83 @@
    });
 
    
+
+
+////////////////////////////         News Letter            /////////////////////////////////////////
+document.querySelector("#show-btn").addEventListener("click",function(){
+    document.querySelector(".popup").classList.add("active");
+});
+
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+    document.querySelector(".popup").classList.remove("active");
+});
+
+
+
+
+
+(function(){
+      emailjs.init("r6RlKGXtEiKGP5a18");
+   })();
+
+
+   const fname = "FoodTreep Recipe App";
+   const msg1 = "This is an automated email.";
+
+   function sendMail(params) {
+    var tempParams = {
+        from_name:fname,
+        to_name:document.getElementById("toName").value,
+        message:msg1,
+        to_email:document.getElementById("toEmail").value,
+    };
+
+    var fname = document.getElementById('toName').value;
+    var femail = document.getElementById('toEmail').value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(fname.trim().length!==0 && femail.match(mailformat) ){
+        
+        emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
+             .then(function(res){
+              console.log("success", res.status);
+         
+                 alert('You have been successfully subscribed!') ;
+         
+        //window.location.reload();
+        // location.reload();
+
+                  document.getElementById('toName').value='';
+                  document.getElementById('toEmail').value='';
+                  document.getElementById('message').innerText= 'Email sent. Please check your email.';
+                  document.getElementById('errors').innerText = '';
+    })
+
+
+    }else{
+        document.getElementById('errors').innerText = 'Please enter a valid information.';
+        document.getElementById('message').innerText = '';
+    }
+
+
+
+    
+
+    
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

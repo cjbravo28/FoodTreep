@@ -19,7 +19,7 @@ $(document).ready(function(){
         fetchMeal('r');
 
         // Textual updates
-        $('#dynamicTitle').text('Random Recipe');
+        $('#dynamicTitle').text('Suggested Recipe');
     });
 
     //also this could be easily refactored, maybe open issue for this too
