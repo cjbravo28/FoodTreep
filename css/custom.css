@@ -438,6 +438,11 @@ header .icons #menu-bars{
     color: #222;
 }
 
+.popup .form1 .form-element1 label{
+    font-size: 14px;
+    color: #222;
+}
+
 .popup .form1 .form-element input[type="text"]{
     margin-top: 5px;
     display: block;
