@@ -574,7 +574,9 @@ header .icons #menu-bars{
         transform: translate(-50%,-50%);
     }
 
-    
+    .sDv{
+        width: fit-content;
+     }
 
 
 }
@@ -639,7 +641,9 @@ header .icons #menu-bars{
     }
 
 
-     
+    .sDv{
+        width: fit-content;
+     }
    
  
 
@@ -731,7 +735,9 @@ header .icons #menu-bars{
         font-size: 50%;
     }
 
-     
+     .sDv{
+        width: fit-content;
+     }
 }
 
 @media(max-width: 420px){
@@ -741,4 +747,8 @@ header .icons #menu-bars{
         border-radius: 1rem;
         margin: 1rem 0;
     }
+
+    .sDv{
+        width: fit-content;
+     }
 }
