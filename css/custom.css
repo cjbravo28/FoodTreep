@@ -574,15 +574,7 @@ header .icons #menu-bars{
         transform: translate(-50%,-50%);
     }
 
-    .sDv{
-       
-  background-size: cover;
-  background-position: center;
-   
-    }
-.sDv h3{
-    margin-left: auto; margin-right: auto;
-}
+    
 
 
 }
