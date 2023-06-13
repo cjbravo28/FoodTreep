@@ -574,6 +574,16 @@ header .icons #menu-bars{
         transform: translate(-50%,-50%);
     }
 
+    .sDv{
+        background-image: url('img/newsPage.jpg');
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+   
+    }
+.sDv h3{
+    margin-left: auto; margin-right: auto;
+}
 
 
 }
@@ -636,6 +646,18 @@ header .icons #menu-bars{
         left: 50%;
         transform: translate(-50%,-50%);
     }
+
+
+    .sDv{
+        background-image: url('img/newsPage.jpg');
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+   
+    }
+.sDv h3{
+    margin-left: auto; margin-right: auto;
+}
 
 }
 
