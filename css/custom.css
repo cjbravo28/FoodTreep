@@ -755,13 +755,11 @@ header .icons #menu-bars{
     }
 
      .sDv{
-        width: max-content;
+        width: 1000px;
      }
 
      .sDv h3, .sDv p {
-        margin-left: auto; 
-        margin-right: auto;
-        text-align: center;
+         
         font-size: 16px;
      }
 }
@@ -778,9 +776,8 @@ header .icons #menu-bars{
         width: max-content;
      }
 
-     .sDv h3, .sDv p {
-        margin-left: auto; 
-        margin-right: auto;
+     .sDv h3, .sDv p{
+        
         text-align: center;
         font-size: 16px;
      }
