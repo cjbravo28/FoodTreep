@@ -356,7 +356,7 @@ header .icons #menu-bars{
 
 .center{
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -371,6 +371,12 @@ header .icons #menu-bars{
     outline: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.center button:hover{
+    padding: 14px 22px;
+    background: #255d3c;
+    font-size: 17px;
 }
 
 .popup{
@@ -561,6 +567,15 @@ header .icons #menu-bars{
     }
 
 
+    .center{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+
+
 }
 
 @media (max-width:768px){
@@ -614,6 +629,13 @@ header .icons #menu-bars{
     
      }
 
+
+     .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 
 }
 

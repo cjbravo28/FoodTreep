@@ -71,6 +71,7 @@
         gap: 10px;
         font-size: 12px;
         font-weight: 800;
+        
     }
 
     .main-screen .catagories > div {
@@ -90,7 +91,17 @@
     .main-screen .catagories::-webkit-scrollbar{
         display: inline;
         /* background: #198d49; */
+        background: rgb(208, 205, 205);
+        width: 5em;
+        cursor: pointer !important;
+        
     }
+
+    .main-screen .catagories::-webkit-scrollbar-thumb:hover{
+        background: #7f7b7b;
+    }
+
+
 
     .main-screen .recipe-list{
         padding: 10px;
@@ -281,8 +292,18 @@
     }
 } */
 
-
+/* .sDv {
+    background-image: url('img/newsPage.jpg');
+    background-repeat: no-repeat;
+  background-size: cover;
+} */
  
+.sDv{
+    background-image: url('img/newsPage.jpg');
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 670px;
+}
    </style>
 
 
@@ -320,14 +341,14 @@
     <i class="fa fa-times" id="close" ></i>
 </form>
 
-<section id="searchDiv" class="sDv" style="margin-top: 100px; margin-bottom: 330px;">
+<section id="searchDiv" class="sDv" style="margin-top: 80px;width: 100vw; height: 100vh; background-image: url('img/newsPage.jpg');background-repeat: no-repeat;background-size: cover; background-position: center;">
 
-    <h3 class="sub-heading" style="font-size: 25px;">Welcome to Food Treep Recipe App</h3>
-    <p style="margin-top: 20px; font-size: 14px; text-transform: none; text-align: center;"> Subscribe to our Newsletter and be the first to get our latest updates. </p>
+    <h3 class="sub-heading" style="width:20em; margin-left: auto; margin-right: auto; border-radius: .5em; font-size: 25px; margin-top: 7em; color: rgb(3, 70, 3); background-color: rgb(250, 248, 248,.7);">Welcome to Food Treep Recipe App</h3> 
+     <p style="height: 1.5em; width: 35em; margin-left: auto; margin-right: auto; border-radius: .5em; margin-top: 20px; font-size: 15px; font-weight: 800; text-transform: none; text-align: center;  background-color: rgb(250, 248, 248,.7)"> Subscribe to our Newsletter and be the first to get our latest updates. </p> 
 
     
-<div class="center" style="margin-top:20px ;">
-        <button id="show-btn">Subscribe</button>
+<div class="center" >
+        <button id="show-btn" style="margin-top:20em ;">Subscribe</button>
 </div>
 <div class="popup">
     <div class="close-btn">&times;</div>
@@ -366,6 +387,10 @@
         
     </div>
 </div>
+
+
+
+
 </section>
 
  
