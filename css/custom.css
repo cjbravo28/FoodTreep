@@ -575,16 +575,21 @@ header .icons #menu-bars{
     }
 
     .sDv{
-        width: 50%;
+        width: 100%;
      }
 
 
 
-     .sDv h3, .sDv p {
+     .sDv h3 {
         margin-left: auto; 
         margin-right: auto;
         text-align: center;
         font-size: 16px;
+     }
+
+     .sDv p{
+        width: 50%;
+        font-size: 12px;
      }
 
 
@@ -623,14 +628,21 @@ header .icons #menu-bars{
     }
 
 
-    .sDv h3, .sDv p {
+    .sDv h3 {
         margin-left: auto; 
         margin-right: auto;
         text-align: center;
         font-size: 16px;
+        width: 60%;
+     }
+     .sDv p{
+        width: 60%;
+        height: 10%;
      }
 
-
+        .sDv .center button{
+            margin-top: 50%;
+        }
 
     .home .home-slider .slide .content h3{
         
@@ -661,7 +673,8 @@ header .icons #menu-bars{
 
 
     .sDv{
-        width: 50%;
+        width: 100%;
+        background-size: cover;
      }
    
  
@@ -755,13 +768,31 @@ header .icons #menu-bars{
     }
 
      .sDv{
-        width: 50%;
+        width: 100%;
      }
 
-     .sDv h3, .sDv p {
+     .sDv h3  {
          
         font-size: 16px;
+        border-radius: .5em; 
+        margin-top: 20px; 
+         
+       
      }
+
+     .sDv p{
+     font-weight: 800; 
+     text-transform: none;
+      text-align: center; 
+     background-color: rgb(250, 248, 248,.7);
+     width: 45%;
+    }
+
+    .sDv .center button{
+        margin-top: 30%;
+        text-align: center;
+    }
+
 }
 
 @media(max-width: 420px){
@@ -773,12 +804,23 @@ header .icons #menu-bars{
     }
 
     .sDv{
-        width: 50%;
+        width: 100%;
      }
 
-     .sDv h3, .sDv p{
+     .sDv h3 {
         
         text-align: center;
         font-size: 16px;
      }
+
+     .sDv p{
+        font-size: 12px;
+        background-color: rgb(250, 248, 248,.7);
+     width: 80%;
+     }
+
+     .sDv .center button{
+        margin-top: 20%;
+        text-align: center;
+    }
 }
