@@ -84,24 +84,26 @@ async function showMealDetails(id) {
     let html="";
     await fetchMealsFromApi(url,id).then(data=>{
         html += `
-          <div id="meal-details" class="mb-5">
+          <div id="meal-details" class="mb-5" style="background-color: #a4f5c6; color: #0b0b0b ">
             <div id="meal-header" class="d-flex justify-content-around ">
-              <div id="meal-thumbail">
+              <div id="meal-thumbail" style="margin-top:5%">
                 <img class="mb-2" src="${data.meals[0].strMealThumb}" alt="" srcset="">
               </div>
-              <div id="details">
+              <div id="details" style="justify-content: center;
+              text-align: center;
+              margin-top: 5%; margin-left:5%;">
                 <h3>${data.meals[0].strMeal}</h3><br>
                 <h6>Category : ${data.meals[0].strCategory}</h6>
                 <h6>Area : ${data.meals[0].strArea}</h6><br>
-                <h4> Ingredients </h4><br>
-                <p> ${data.meals[0].strIngredient1} ~ ${data.meals[0].strMeasure1} </p>
-                <p> ${data.meals[0].strIngredient2} ~ ${data.meals[0].strMeasure2} </p>
-                <p> ${data.meals[0].strIngredient3} ~ ${data.meals[0].strMeasure3} </p>
-                <p> ${data.meals[0].strIngredient4} ~ ${data.meals[0].strMeasure4} </p>
-                <p> ${data.meals[0].strIngredient5} ~ ${data.meals[0].strMeasure5} </p>
-                <p> ${data.meals[0].strIngredient6} ~ ${data.meals[0].strMeasure6} </p>
-                <p> ${data.meals[0].strIngredient7} ~ ${data.meals[0].strMeasure7} </p>
-                <p> ${data.meals[0].strIngredient8} ~ ${data.meals[0].strMeasure8} </p>
+                <h4 style="font-style:normal; font-weight: 700;"> Ingredients </h4><br>
+                <ol> ${data.meals[0].strIngredient1} ~ ${data.meals[0].strMeasure1} </ol>
+                <ol> ${data.meals[0].strIngredient2} ~ ${data.meals[0].strMeasure2} </ol>
+                <ol> ${data.meals[0].strIngredient3} ~ ${data.meals[0].strMeasure3} </ol>
+                <ol> ${data.meals[0].strIngredient4} ~ ${data.meals[0].strMeasure4} </ol>
+                <ol> ${data.meals[0].strIngredient5} ~ ${data.meals[0].strMeasure5} </ol>
+                <ol> ${data.meals[0].strIngredient6} ~ ${data.meals[0].strMeasure6} </ol>
+                <ol> ${data.meals[0].strIngredient7} ~ ${data.meals[0].strMeasure7} </ol>
+                <ol> ${data.meals[0].strIngredient8} ~ ${data.meals[0].strMeasure8} </ol>
               </div>
             </div>
             <div id="meal-instruction" class="mt-3">
@@ -184,10 +186,13 @@ function addRemoveToFavList(id) {
     if (contain) {
         let number = arr.indexOf(id);
         arr.splice(number, 1);
-        alert("You removed the meal from the list.");
+        // alert("You removed the meal from the list.");
+        swal("Removed!", "You removed the meal from the list!", "success");
     } else {
         arr.push(id);
-        alert("Meal added to favourites list.");
+        // alert("Meal added to favourites list.");
+        swal("Added!", "Meal added to favourites list!", "success");
+
     }
     localStorage.setItem("favouritesList",JSON.stringify(arr));
     showMealList();

@@ -298,12 +298,12 @@
   background-size: cover;
 } */
  
-.sDv{
+/* .sDv{
     background-image: url('img/newsPage.jpg');
     background-repeat: no-repeat;
   background-size: cover;
   
-}
+} */
 
 
 
@@ -352,14 +352,14 @@
     <i class="fa fa-times" id="close" ></i>
 </form>
 
-<section id="searchDiv" class="sDv" style="margin-top: 80px;   height: 100vh; ">
+<section id="searchDiv" class="sDv1" >
 
-    <h3 class="sub-heading" style="width:40%; margin-left: auto; margin-right: auto; border-radius: .5em; font-size: 25px; margin-top: 7em; color: rgb(3, 70, 3); background-color: rgb(250, 248, 248,.7);">Welcome to Food Treep Recipe App</h3> 
-     <p style="height: 1.5em; width: 50%; margin-left: auto; margin-right: auto; border-radius: .5em; margin-top: 20px; font-size: 15px; font-weight: 800; text-transform: none; text-align: center;  background-color: rgb(250, 248, 248,.7)"> Subscribe to our Newsletter and be the first to get our latest updates. </p> 
+     <!-- <h3 class="sub-heading" style="width:40%; margin-left: auto; margin-right: auto; border-radius: .5em; font-size: 25px; margin-top: 7em; color: rgb(3, 70, 3); background-color: rgb(250, 248, 248,.7);">Welcome to Food Treep Recipe App</h3> 
+     <p style="height: 1.5em; width: 50%; margin-left: auto; margin-right: auto; border-radius: .5em; margin-top: 20px; font-size: 15px; font-weight: 800; text-transform: none; text-align: center;  background-color: rgb(250, 248, 248,.7)"> Subscribe to our Newsletter and be the first to get our latest updates. </p>  -->
 
     
 <div class="center" >
-        <button id="show-btn" style="margin-top:370% ;">Subscribe</button>
+        <!-- <button id="show-btn">Subscribe</button> -->
 </div>
 <div class="popup">
     <div class="close-btn">&times;</div>
@@ -382,32 +382,38 @@
         <div id="errors" style="font-size: 10px; font-weight: 600; color: red; text-align: center;"></div>
 
         <div class="form-element">
-            <label for="toName">What is your name?</label>
-            <input type="text" id="toName" placeholder="Enter your name..">
+            
         </div>
 
 
         <div class="form-element1">
-            <label for="toEmail">How can we reach you?</label>
-            <input type="text" id="toEmail" placeholder="Enter your email..">
+          
         </div>
 <br>
         <div class="form-element">
-            <button onclick="sendMail()">Subscribe Now</button>
+            
         </div>
         
     </div>
-</div>
+</div> 
+
+
+
+
+
 
 
 
 
 </section>
 
+
+
+
  
 
 
- <section class="home" id="home">
+ <!-- <section class="home" id="home">
 
 
 
@@ -444,10 +450,10 @@
                     </p>
                     <a href="suggestion.html" class="btn-view-recipe">Explore Recipe</a>                      
 
-                   <!-- <a href="" class="btn-view-recipe"><i class="fa-solid fa-eye"></i> View recipe</a>   -->                   
+                    <a href="" class="btn-view-recipe"><i class="fa-solid fa-eye"></i> View recipe</a>   -->                   
                   <!--  <a href="" class="btn-add-favorites"> 
                        <i class="fa fa-heart"> </i> Add Favorites
-                        </a>-->
+                        </a> 
                 </div>
 
                 <div class="image">
@@ -489,7 +495,7 @@
     
     
 
- </section>
+ </section> -->
 
 
 
@@ -523,7 +529,8 @@
 
  <div style="margin-bottom: 4rem; margin-top: 3rem;">  </div>
     
-    <h1 class="heading">Find the right Recipe for you.</h1>
+    <h1 class="heading">Welcome to FoodTreep Recipe App</h1>
+    <h3 class="sub-heading">Find the right Recipe for you.</h3>
 
 
 
@@ -750,6 +757,34 @@
 
 </section>
 
+
+
+<div class="modal-cont" id="modal-cont">
+    <div class="modal1" id="modal1">
+        <button class="close-btn" id="close11"><i class="fa fa-times"></i></button>
+        <div class="modal-content">
+            <div class="headers">
+                <h2 class="log">FoodTreep Newsletter</h2>
+                <p class="tagline">Be the first to get updates from us.</p>
+                <br>
+                <p class="errors" id="errors101"></p>
+
+            </div>
+             
+                 <label for="toName">What is your name?</label><br>
+                    <input type="text" id="toName" placeholder="Enter your name..">
+                <br>
+            <label for="toEmail">How can we reach you?</label><br>
+            <input type="text" id="toEmail" placeholder="Enter your email.." style="text-transform: none;"><br>
+            <p class="message" id="message101"></p>
+            <button onclick="sendMail()" class="subs">Subscribe Now</button><br>
+            
+            <br>
+             
+        </div>
+    </div>
+</div>
+
  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
  
 
@@ -769,6 +804,29 @@
 
 
 <script>
+
+$(document).ready(function(){
+
+    function showModal(){
+        $('#modal-cont').show();
+        // $('html body').css('overflow','hidden');
+
+    }
+
+    function closeModal(){
+        $('#modal-cont').hide();
+    }
+
+    setTimeout(showModal,3000);
+    $('#close11').click(function(){
+        closeModal();
+    })
+});
+
+
+
+
+
  var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
    centeredSlides: true,
@@ -787,13 +845,13 @@
 
 
 ////////////////////////////         News Letter            /////////////////////////////////////////
-document.querySelector("#show-btn").addEventListener("click",function(){
-    document.querySelector(".popup").classList.add("active");
-});
+// document.querySelector("#show-btn").addEventListener("click",function(){
+//     document.querySelector(".popup").classList.add("active");
+// });
 
-document.querySelector(".popup .close-btn").addEventListener("click",function(){
-    document.querySelector(".popup").classList.remove("active");
-});
+// document.querySelector(".popup .close-btn").addEventListener("click",function(){
+//     document.querySelector(".popup").classList.remove("active");
+// });
 
 
 
@@ -825,21 +883,22 @@ document.querySelector(".popup .close-btn").addEventListener("click",function(){
              .then(function(res){
               console.log("success", res.status);
          
-                 alert('You have been successfully subscribed!') ;
+                //  alert('You have been successfully subscribed!') ;
          
         //window.location.reload();
         // location.reload();
 
                   document.getElementById('toName').value='';
                   document.getElementById('toEmail').value='';
-                  document.getElementById('message').innerText= 'Email sent. Please check your email.';
-                  document.getElementById('errors').innerText = '';
+                  document.getElementById('message101').innerText= 'Email sent. Please check your email.';
+                  document.getElementById('errors101').innerText = '';
     })
 
 
     }else{
-        document.getElementById('errors').innerText = 'Please enter a valid information.';
-        document.getElementById('message').innerText = '';
+        document.getElementById('errors101').innerText = 'Please enter a valid information.';
+        document.getElementById('message101').innerText = '';
+        console.log("error!")
     }
 
 
@@ -988,6 +1047,9 @@ printBtn.addEventListener('click',function(){
 
 
 </script>
-  <script src="js/script.js"></script>   
+  <script src="js/script.js"></script>  
+  
+  
+  
 </body>
 </html>
