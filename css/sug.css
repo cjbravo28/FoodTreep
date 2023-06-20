@@ -20,7 +20,7 @@ body{background-color:whitesmoke;color:rgb(248, 241, 241)}
 .mealCards .columns{margin-left:0}
 
 .mealInstructions {
-    font-size: 10px;
+    font-size: 15px;
     white-space: pre-line;
     margin-left: 60px;
     margin-right: 60px;
@@ -59,29 +59,6 @@ section#landing .chefimg{top:-20px;right:-3px}
 section#random .chefimg{top:5px;right:-14px}
 section#mealCardsSection .chefimg{top:-20px;right:22px}
 
-
-
-/* Media queries */
-   
-/* @media (min-width: 750px) {
-    .navbar-list {list-style:none}
-}
-@media (min-width: 750px) {
-    .navbar-item {position:relative;display:inline}
-}
-@media (min-width: 750px){
-    .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;text-decoration: none;color:black}
-}
-@media (min-width: 750px){
-    .navbar-link-category {text-transform: uppercase;font-size: 10px;font-weight: 500;letter-spacing: .1rem;margin-right: 10px;text-decoration: none;color:black}
-}
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-    .nav-list-category {
-      display:none;
-    }
-  } */
-
-
 #navList{list-style:none;margin-bottom:0;display:flex;justify-content:space-evenly}
 #navItem{position:relative;display:inline}
 #navLink{text-transform:uppercase;font-size:90vw;font-weight:600;letter-spacing:.10rem;text-decoration:none;color:#6e2222}
@@ -96,3 +73,18 @@ section#mealCardsSection .chefimg{top:-20px;right:22px}
 #errorMessageContainer{display: none; background: #679f38; text-align: center;height: 100px; color: white; justify-content: center; align-items: center;}
 #errorMessageText{line-height: 100px; padding: 0px; margin: 0 40px 0 0;}
 #errorMessageBtn{margin: 0px; color: white; border: 1px solid white;}
+
+ @media (min-width: 750px) {
+    .navbar-list {list-style:none}
+}
+@media (min-width: 750px) {
+    .navbar-item {position:relative;display:inline}
+}
+@media (min-width: 300px){
+    .mealInstructions {margin-left: 1px;}
+}
+@media (min-width: 200px){
+    .mealInstructions {margin-left: 1px;}
+
+    
+  } 
