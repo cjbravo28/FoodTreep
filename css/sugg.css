@@ -109,7 +109,7 @@
     margin-top: 0; }
    a
   {
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-radius: .6rem;
     padding: .1rem .2rem;
     color: rgb(14, 12, 12);
@@ -119,8 +119,9 @@
   a.active
 {
 
-    color: #1a1717;
-    background: rgba(253, 255, 253, 0.767);
+    
+    color: #000000;
+    background: rgba(253, 255, 253, 0.945);
     
 } 
 .navbar-item{
