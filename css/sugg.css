@@ -109,7 +109,7 @@
     margin-top: 0; }
    a
   {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     border-radius: .6rem;
     padding: .1rem .2rem;
     color: rgb(14, 12, 12);
@@ -140,7 +140,7 @@
     display: inline-block;
     height: 35px;
     padding: 0 25px;
-    color: #e5f3e4;
+    color: #fdfffd;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
