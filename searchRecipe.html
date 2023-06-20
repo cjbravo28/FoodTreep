@@ -233,6 +233,76 @@ header .icons1 #menu-bars{
 
 
 
+ 
+ header .navbar12 a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+    bottom: 0;
+}
+
+header .navbar12 a.active,
+header .navbar12 a:hover{
+    color: #fff;
+    background: var(--green);
+}
+
+header .icons12 i,
+header .icons12 a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons12 i:hover,
+header .icons12 a:hover{
+    color: #fff;
+    background: var(--green);
+    transform: rotate(90deg);
+}
+
+header .icons12 #menu-bars12{
+    display: none;
+}
+
+ @media (max-width:768px){
+
+header .icons12 #menu-bars12{
+    display: inline-block;
+}
+
+header .navbar12{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    padding: 1rem;
+    clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+}
+
+header .navbar12.active12{
+    clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
+}
+
+header .navbar12 a{
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+}
+
+ }
+
+
   </style>
 
 
@@ -243,6 +313,7 @@ header .icons1 #menu-bars{
 </head>
 
 <body>
+  
 
   <!-- full body div -->
   <div id="full-body">
@@ -251,23 +322,23 @@ header .icons1 #menu-bars{
     <div id="header" class="container-fulied">
 
       <!-- header navbar -->
-      <div id="" class="navbar1 navbar-dark "  >
+      <div id="" class="navbar2 navbar-dark "  >
         <div class="container-fluid">
            
           <header>
             <a href="index.html" class="logo"><img src="img/logo6.png"    alt="logo"></i> </a>
           
-           <nav class="navbar">
-               <a href="index.html"  style="text-decoration: none; margin-right: 1rem;">Home</a>
-               <a href="searchRecipe.html" class="active" style="text-decoration: none; margin-right: 1rem;">Recipes</a>
-               <a href="fav.html" style="text-decoration: none;margin-right: 1rem;">Favorites</a>
-               <a href="suggestion.html" style="text-decoration: none;margin-right: 1rem;">Meal Suggestion</a>
+           <nav class="navbar12">
+               <a href="index.html"  style="text-decoration: none;  ">Home</a>
+               <a href="searchRecipe.html" class="active" style="text-decoration: none;  ">Recipes</a>
+               <a href="fav.html" style="text-decoration: none; ">Favorites</a>
+               <a href="suggestion.html" style="text-decoration: none">Meal Suggestion</a>
                <a href="ktool.html" style="text-decoration: none;">Kitchen Tool</a>
        
        
            </nav>
-           <div class="icons">
-            <i class="fa fa-bars" id="menu-bars"></i>
+           <div class="icons12">
+            <i class="fa fa-bars" id="menu-bars12"></i>
             <!-- <a href="searchRecipe.html" class="fa fa-search" id="search-icon"> </a> -->
              
            </div>
@@ -394,9 +465,26 @@ header .icons1 #menu-bars{
 
   <!-- link to js -->
   <script src="js/script2.js"></script>
-  <script src="js/script.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+
+ <script>
+  let menu12 = document.querySelector('#menu-bars12');
+let navbar12 = document.querySelector('.navbar12');
+
+menu12.onclick = () => {
+    menu12.classList.toggle('fa-times');
+    navbar12.classList.toggle('active12');
+
+    console.log("working");
+}
 
 
+window.onscroll = () => {
+    menu12.classList.remove('fa-times');
+    navbar12.classList.remove('active12');
+}
+ 
+ </script>
 
   
 </body>
