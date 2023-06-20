@@ -21,7 +21,7 @@
 
 html{
     font-size: 62.5%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
@@ -30,7 +30,9 @@ section{
     padding: 2rem 9%;
 }
 
-
+/* section:nth-child(even){
+    background: #f4dfd6;
+} */
 
 .sub-heading{
     text-align: center;
@@ -219,11 +221,11 @@ header .icons #menu-bars{
  }
 
  .home .home-slider .slide .content{
-    flex:  45rem;
+    flex: 1 1 45rem;
  }
 
  .home .home-slider .slide .image{
-    flex: 45rem;
+    flex: 1 1 45rem;
  }
 
  .home .home-slider .slide .image img{
@@ -354,7 +356,7 @@ header .icons #menu-bars{
 
 .center{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -369,12 +371,6 @@ header .icons #menu-bars{
     outline: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.center button:hover{
-    padding: 14px 22px;
-    background: #255d3c;
-    font-size: 17px;
 }
 
 .popup{
@@ -494,36 +490,30 @@ header .icons #menu-bars{
     font-size: 15px;
     color: #1a79ca;
 }
-
-
-
-
-
 .modal-cont{
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
-    top: 0;
+    top: 5%;
     bottom: 0;
     right: 0;
     left: 0;
     display: none;
-    
+    z-index: 500;
 }
 
 .modal1{
     color: #fff;
     background-color: #52c080;  /*#52c080*/
-    border-radius: 5px;
+    border-radius: 1%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: absolute;
     overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
-    width: 500px;
-    height: 470px;
-     
+    /* max-width: 100%; */
+    width: 50%vw;
+    height: 40%vh;
 }
 
 .modal-content{
@@ -617,6 +607,45 @@ header .icons #menu-bars{
     cursor: pointer;
 }
 
+.modal-content input{
+    width: 80% !important;
+    height: 15% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -668,32 +697,6 @@ header .icons #menu-bars{
     }
 
 
-    .center{
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .sDv{
-        width: 100%;
-     }
-
-
-
-     .sDv h3 {
-        margin-left: auto; 
-        margin-right: auto;
-        text-align: center;
-        font-size: 16px;
-     }
-
-     .sDv p{
-        width: 50%;
-        font-size: 12px;
-     }
-
-
 }
 
 @media (max-width:768px){
@@ -728,23 +731,6 @@ header .icons #menu-bars{
         margin: 0 1rem;
     }
 
-
-    .sDv h3 {
-        margin-left: auto; 
-        margin-right: auto;
-        text-align: center;
-        font-size: 16px;
-        width: 60%;
-     }
-     .sDv p{
-        width: 60%;
-        height: 10%;
-     }
-
-        .sDv .center button{
-            margin-top: 50%;
-        }
-
     .home .home-slider .slide .content h3{
         
         font-size: 5rem;
@@ -764,21 +750,6 @@ header .icons #menu-bars{
     
      }
 
-
-     .center{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-
-    .sDv{
-        width: 100%;
-        background-size: cover;
-     }
-   
- 
 
 }
 
@@ -868,33 +839,7 @@ header .icons #menu-bars{
         font-size: 50%;
     }
 
-     .sDv{
-        width: 100%;
-     }
-
-     .sDv h3  {
-         
-        font-size: 18px;
-        border-radius: .5em; 
-        margin-top: 20px; 
-        width: 60%;
-         
-       
-     }
-
-     .sDv p{
-     font-weight: 800; 
-     text-transform: none;
-      text-align: center; 
-     background-color: rgb(250, 248, 248,.7);
-     width: 45%;
-    }
-
-    .sDv .center button{
-        margin-top: 30%;
-        text-align: center;
-    }
-
+     
 }
 
 @media(max-width: 420px){
@@ -904,45 +849,4 @@ header .icons #menu-bars{
         border-radius: 1rem;
         margin: 1rem 0;
     }
-
-    .sDv{
-        width: 100%;
-     }
-
-     .sDv h3 {
-        
-        text-align: center;
-        font-size: 20px;
-        width: 50%;
-     }
-
-     .sDv p{
-        font-size: 12px;
-        background-color: rgb(250, 248, 248,.7);
-     width: 80%;
-     }
-
-     .sDv .center button{
-        margin-top: 20%;
-        text-align: center;
-    }
-}
-
-
-
-
-@media(max-width: 396px){
-
-    .modal1{
-        height: 520px;
-    }
-
-}
-
-@media(max-width: 276px){
-
-    .modal1{
-        height: 550px;
-    }
-    
 }
