@@ -4,6 +4,7 @@
     padding: 30px 0;
     background: #11522c;
     color: #fff;
+     
 }
 
 .footer .social{
@@ -77,6 +78,7 @@
     text-align: center;
     font-size: 12px;
     color: #aaa;
+    
 }
 
 
@@ -181,3 +183,20 @@ form  .btn button{
 .news .txt{
     margin-top: 5px;
 }
+
+
+@media (max-width:611px){
+.footer {
+    margin-top: 60px;
+}
+
+}
+
+@media (max-width:266px){
+    .footer {
+        margin-top: 520px;
+        
+    }
+    
+    }
+

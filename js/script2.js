@@ -84,7 +84,7 @@ async function showMealDetails(id) {
     let html="";
     await fetchMealsFromApi(url,id).then(data=>{
         html += `
-          <div id="meal-details" class="mb-5" style="background-color: #a4f5c6; color: #0b0b0b ">
+          <div id="meal-details" class="mb-5" style="background-color: #d7ecdc; color: #0b0b0b ">
             <div id="meal-header" class="d-flex justify-content-around ">
               <div id="meal-thumbail" style="margin-top:5%">
                 <img class="mb-2" src="${data.meals[0].strMealThumb}" alt="" srcset="">
