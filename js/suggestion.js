@@ -163,6 +163,10 @@ const createMeal = (meal,type) => {
     if ( meal.strTags ) {
         mealMetadata += `<span>Tags:</span> ${meal.strTags.split(',').join(', ')} <br/>`
     }
+     // Set YouTube link
+    if ( meal.strYoutube ) {
+        mealMetadata +=`<span><i class="fa-brands fa-youtube fa-2xl" style="color: #d90d0d;"></i>:</span> <a href='${meal.strYoutube}' target="_blank" title="Watch how to cook ${meal.strMeal}">${meal.strYoutube}</a><br/>`
+    }
 
      // Set Source link
      if ( meal.strSource ) {
