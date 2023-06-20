@@ -138,13 +138,13 @@
   input[type="reset"],
   input[type="button"] {
     display: inline-block;
-    height: 35px;
-    padding: 0 25px;
+    height: 37px;
+    padding: 0 27px;
     color: #fdfffd;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
-    line-height: 38px;
+    line-height: 40px;
     letter-spacing: .1rem;
     text-transform: uppercase;
     text-decoration: none;
