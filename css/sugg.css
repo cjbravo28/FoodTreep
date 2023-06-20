@@ -119,8 +119,8 @@
   a.active
 {
 
-    color: #030202;
-    background: rgba(255, 255, 255, 0.342);
+    color: #1a1717;
+    background: rgba(253, 255, 253, 0.767);
     
 } 
 .navbar-item{
@@ -137,7 +137,7 @@
   input[type="reset"],
   input[type="button"] {
     display: inline-block;
-    height: 38px;
+    height: 35px;
     padding: 0 25px;
     color: #e5f3e4;
     text-align: center;
