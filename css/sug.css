@@ -13,8 +13,8 @@ body{background-color:whitesmoke;color:rgb(248, 241, 241)}
 
 
 .card{border-radius:7px;margin:10px}
-.card img{width:100%;max-height:150px}
-.card-body{padding:5px 15px}
+.card img{width:100px;max-height:120px}
+.card-body{padding: 15px}
 .cardTitle{margin-bottom:15px}
 .mealCards{text-align:center}
 .mealCards .columns{margin-left:0}
