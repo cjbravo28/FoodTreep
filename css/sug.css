@@ -15,9 +15,17 @@ body{background-color:whitesmoke;color:rgb(248, 241, 241)}
 .card{border-radius:7px;margin:10px}
 .card img{width:100%;max-height:150px}
 .card-body{padding:5px 15px}
-.cardTitle{margin-bottom:5px}
+.cardTitle{margin-bottom:15px}
 .mealCards{text-align:center}
 .mealCards .columns{margin-left:0}
+
+.mealInstructions {
+    font-size: 10px;
+    white-space: pre-line;
+    margin-left: 60px;
+    margin-right: 60px;
+    line-height: 1.9;
+}
 
 
 .chefimg{position:absolute;height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
