@@ -329,7 +329,7 @@ header .icons #menu-bars{
 }
 @media (min-width: 540px) {
     .navbar-list {list-style:none}
-    .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 10px;text-decoration: none;color:black}
+    .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 5px;text-decoration: none;color:black}
     .navbar-item {position:relative;display:inline}
     .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
     .multiText {  text-align: center;font-size: 30px;}
@@ -356,7 +356,7 @@ header .icons #menu-bars{
     
     
 }
-@media (min-width: 230px){
+@media (min-width: 280px){
     .navbar-list {list-style:none; }
     .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 10px;text-decoration: none;color:black}
     .navbar-item {position:relative;display:inline; margin-top: 100px;}
