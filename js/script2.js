@@ -12,6 +12,16 @@ async function fetchMealsFromApi(url,value) {
 
 
 
+
+
+const closeIt= document.querySelector("#closing1");
+const cl1=document.querySelector('#cl-btn');
+const cl2=document.querySelector('#cl-btn2');
+
+
+
+
+
 // its show's all meals card in main acording to search input value
 function showMealList(){
     let inputValue = document.getElementById("my-search").value;
@@ -19,8 +29,14 @@ function showMealList(){
     let url="https://www.themealdb.com/api/json/v1/1/search.php?s=";
     let html = "";
     let meals=fetchMealsFromApi(url,inputValue);
+
+     
+    
     meals.then(data=>{
         if (data.meals) {
+
+           
+
             data.meals.forEach((element) => {
                 let isFav=false;
                 for (let index = 0; index < arr.length; index++) {
@@ -56,6 +72,10 @@ function showMealList(){
                 `;
                 }  
             });
+
+      
+
+
         } else {
             html += `
             <div class="page-wrap d-flex flex-row align-items-center">
@@ -74,17 +94,26 @@ function showMealList(){
         }
         document.getElementById("main").innerHTML = html;
     });
-}
+
+
+    }
+ 
+
 
 
 
 //its shows full meal details in main
 async function showMealDetails(id) {
+    
+
+
+    
     let url="https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
     let html="";
     await fetchMealsFromApi(url,id).then(data=>{
         html += `
           <div id="meal-details" class="mb-5" style="background-color: #d7ecdc; color: #0b0b0b ">
+            <div id="closing1" class="closing"> &#10005; </div>
             <div id="meal-header" class="d-flex justify-content-around ">
               <div id="meal-thumbail" style="margin-top:5%">
                 <img class="mb-2" src="${data.meals[0].strMealThumb}" alt="" srcset="">
@@ -121,8 +150,48 @@ async function showMealDetails(id) {
           <div class="pr">  <a href="javascript:void(0);" onclick="printPageArea('printM')" class="btn btn-outline-light mt-3" style="font-size: 14px; background: green;"> <i class="fa fa-print" aria-hidden="true"></i> Print</a>
             </div>
         `;
+
+       
     });
-    document.getElementById("main").innerHTML=html;
+
+   
+
+    // document.getElementById("main").innerHTML=html;
+
+
+     
+        document.getElementById("main").innerHTML=html;
+   
+     
+
+    // document.querySelector('#closing1').onclick = () =>{
+    //     document.querySelector('#cl-btn').classList.add('hidden2');
+    // }
+
+
+
+    document.querySelector("#closing1").addEventListener("click", function(){
+        document.querySelector('#cl-btn').classList.add('hidden2');
+        document.location.reload(true); 
+
+     });
+    //     
+    //     //.
+    //      screen.main.classList.remove("hidden");
+    //     //  screen.recipe.querySelector(".thumbnail img").src = "";
+    //     // screen.recipe.querySelector(".details h2").innerText = "";
+    //     // screen.recipe.querySelector(".details ul").innerHTML = "";
+    //     // screen.recipe.querySelector(".details ol").innerHTML = "";
+    //     cl1.classList.remove('hidden2');
+       
+    //     }
+    //     else{
+    //         cl1.classList.add('hidden2');
+           
+    //     }
+// });
+     
+    
 }
 
 

@@ -175,6 +175,14 @@ font-size: 5rem;
 
 
 /* form style */
+body{
+    text-transform: none !important;
+}
+h3{
+    text-transform: lowercase !important;
+    margin-top: -20px;
+    color: #27ae60;
+}
 p{
 font-size:x-large;
 font-weight: 600;
@@ -272,6 +280,129 @@ header .navbar a{
     width: 90%;
     margin: 0 1rem;
 }
+p{
+font-size: large;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+color:rgb(6, 108, 99);
+margin-bottom: 1em;
+}
+
+.container{
+margin-top: 14em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+box-shadow: 2px 2px 3px white;
+height: 70vh;
+width: 65em !important;
+background-color:rgb(147, 241, 194);
+border: none;
+border-radius: 20px;
+box-shadow: 5px 5px rgb(117, 176, 145);
+
+} 
+.btn{
+display: flex;
+}
+button{
+margin: 45px 6px;
+width: auto;
+padding: 12px 18px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+box-shadow: 1px 1px rgb(236, 155, 155);
+font-weight: bold;
+}
+input{
+padding: 18px 18px;
+border-radius: 5px;
+margin: 5px auto;
+background-color: whitesmoke;
+width: 25em !important;
+}
+
+
+}
+@media (max-width:550px){
+.container{
+margin-top: 14em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+box-shadow: 2px 2px 3px white;
+height: 55vh;
+width: 50em !important;
+background-color:rgb(147, 241, 194);
+border: none;
+border-radius: 15px;
+box-shadow: 5px 5px rgb(117, 176, 145);
+
+} 
+.btn{
+display: flex;
+}
+button{
+margin: 35px 4px;
+width: auto;
+padding: 8px 16px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+box-shadow: 1px 1px rgb(236, 155, 155);
+font-weight: bold;
+}
+input{
+padding: 12px 12px;
+border-radius: 5px;
+margin: 5px auto;
+background-color: whitesmoke;
+width: 25em !important;
+}
+
+
+}
+@media (max-width:420px){
+    .container{
+margin-top: 14em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+box-shadow: 2px 2px 3px white;
+height: 50vh;
+width: 40em !important;
+background-color:rgb(147, 241, 194);
+border: none;
+border-radius: 15px;
+box-shadow: 5px 5px rgb(117, 176, 145);
+
+} 
+.btn{
+display: flex;
+}
+button{
+margin: 40px 2px;
+width: auto;
+padding: 4px 8px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+box-shadow: 1px 1px rgb(236, 155, 155);
+font-weight: bold;
+}
+input{
+padding: 8px 8px;
+border-radius: 5px;
+margin: 5px auto;
+background-color: whitesmoke;
+width: 20em !important;
+}
+
+
 
 }
 
@@ -286,8 +417,7 @@ html{
     </style>
 
 
-    <title>FoodTreep | Kitchen tool</title>
-    <link rel="shortcut icon" href="img/cooking.png"> 
+    <title>Kitchen tools Conversion</title>
 </head>
 
 <body>
@@ -331,6 +461,9 @@ html{
             <p>
                 Kitchen Tool Conversion
             </p>
+            <h3>
+                (convert to millimeter(ml))
+            </h3>
             <input type="number" placeholder="input quantity" id="quantity">
         
         <div class="btn">
@@ -340,7 +473,8 @@ html{
             <button id="gallon">gallon</button>
         </div>
         <input type="text" id="result" placeholder="result" disabled>
-            
+    </br></br>
+        <h2 id="alert"></h2>  
         </div>
     </main>
 
@@ -361,9 +495,9 @@ html{
   
   
       <div class="social"> 
-        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
       </div>
   
   
@@ -415,9 +549,11 @@ teaspoonBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
     alert('enter a number')
+    // document.getElementById('alert').innerText = `Enter a Number!`
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
     alert('enter a number greater than zero')
+    // document.getElementById('alert').innerText = `Enter a number greater than zero!`
     qtinput.value = "";
 }
 else{
@@ -431,9 +567,14 @@ tablespoonBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
     alert('enter a number')
+    // document.getElementById('alert').innerText = `Enter a Number!`
+    
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
     alert('enter a number greater than zero')
+    
+    // document.getElementById('alert').innerText = `Enter a number greater than zero!`
+
     qtinput.value = "";
 }
 else{
@@ -448,9 +589,13 @@ cupBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
     alert('enter a number')
+    // document.getElementById('alert').innerText = `Enter a Number!`
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
     alert('enter a number greater than zero')
+    
+    // document.getElementById('alert').innerText = `Enter a number greater than zero!`
+
     qtinput.value = "";
 }
 else{
@@ -465,9 +610,13 @@ gallonBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
     alert('enter a number')
+    // document.getElementById('alert').innerText = `Enter a Number!`
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
     alert('enter a number greater than zero')
+    
+    // document.getElementById('alert').innerText = `Enter a number greater than zero!`
+
     qtinput.value = "";
 }
 else{
