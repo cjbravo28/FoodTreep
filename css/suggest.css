@@ -162,10 +162,10 @@ header .icons #menu-bars{
     margin-top: 100px;
 }
 .multiText {
-    margin-right: 300px;
+    margin-right: 320px;
     color: rgb(99, 4, 4);
     font-family: 'Nunito', sans-serif;
-    font-size: 100px;
+    font-size: 200px;
     font-size: larger;
   
 
@@ -351,10 +351,9 @@ header .icons #menu-bars{
     .multiText { font-size: 25px; font-weight: 900; margin-bottom: 50px; margin-top:80px;}
     .btnRandomRecipe{
         margin: auto;
+        margin-right: 50px;
     }
-    .dynamicButton{
-       margin-right: 50px;
-    }
+  
     
     
 }
