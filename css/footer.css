@@ -237,7 +237,7 @@ form  .btn button{
 } */
 
 .nletterform .emailFoot{
-    padding: 7px;
+    padding: 6px;
     outline: none;
     border: 2px solid #ccc;
     background-color: #11522c;
@@ -247,12 +247,13 @@ form  .btn button{
     margin-left: 2px;
     width: 20%;
     text-transform: none;
+    font-size: 13px;
     
 
 }
 
 .nletterform .subsNow{
-    padding: 7px;
+    padding: 6px;
     background-color: #1f7041;
     outline: none;
     border: 2px solid #ccc;
@@ -264,7 +265,7 @@ form  .btn button{
 }
 
 .nletterform .subsNow:hover{
-    padding: 8px;
+    padding: 6px;
     background-color: #289153;
     outline: none;
     border: 2px solid #ccc;
