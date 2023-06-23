@@ -27,6 +27,7 @@
 
     <title>Contact Us</title>
     <link rel="shortcut icon" href="img/cooking.png"> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -68,10 +69,10 @@
               <div class="card-header"><img src="img/icon_girl.jpg" class="image_icon"/></div>
               <div class="card-body"><h1>Joyce Bravo</h1></div> 
               <div class="card-footer">
-                <a class="link" href="https://www.facebook.com"><img src="img/facebook.jpg" class="imageMedia"></a>
-                <a class="link" href="https://www.linkedin.com"><img src="img/in.jpg" class="imageMedia" ></a>
-                <a class="link" href="https://github.com/login"><img src="img/git.jpg" class="imageMedia" ></a>
-                <a class="link" href="https://twitter.com/login"><img src="img/twitter.jpg" class="imageMedia"></a>
+                <a class="link" href="https://www.facebook.com" target="_blank"><img src="img/facebook.jpg" class="imageMedia"></a>
+                <a class="link" href="https://www.linkedin.com" target="_blank"><img src="img/in.jpg" class="imageMedia" ></a>
+                <a class="link" href="https://github.com/login" target="_blank"><img src="img/git.jpg" class="imageMedia" ></a>
+                <a class="link" href="https://twitter.com/login" target="_blank"><img src="img/twitter.jpg" class="imageMedia"></a>
               </div>
             </div>
 
@@ -79,10 +80,10 @@
                 <div class="card-header"><img src="img/icon_girl2.jpg" class="image_icon"/></div>
                 <div class="card-body"><h1>Nylce Joy Grejarte</h1></div> 
                 <div class="card-footer">
-                    <a class="link" href="https://www.facebook.com"><img src="img/facebook.jpg" class="imageMedia"></a>
-                    <a class="link" href="https://www.linkedin.com"><img src="img/in.jpg" class="imageMedia" ></a>
-                    <a class="link" href="https://github.com/login"><img src="img/git.jpg" class="imageMedia" ></a>
-                    <a class="link" href="https://twitter.com/login"><img src="img/twitter.jpg" class="imageMedia"></a>
+                    <a class="link" href="https://www.facebook.com" target="_blank"><img src="img/facebook.jpg" class="imageMedia"></a>
+                    <a class="link" href="https://www.linkedin.com" target="_blank"><img src="img/in.jpg" class="imageMedia" ></a>
+                    <a class="link" href="https://github.com/login" target="_blank"><img src="img/git.jpg" class="imageMedia" ></a>
+                    <a class="link" href="https://twitter.com/login" target="_blank"><img src="img/twitter.jpg" class="imageMedia"></a>
                   
                 </div>
               </div>
@@ -91,10 +92,10 @@
                 <div class="card-header"><img src="img/icon_boy.jpg" class="image_icon"/></div>
                 <div class="card-body"><h1>Paul John Lacorda</h1></div> 
                 <div class="card-footer">
-                    <a class="link" href="https://www.facebook.com"><img src="img/facebook.jpg" class="imageMedia"></a>
-                    <a class="link" href="https://www.linkedin.com"><img src="img/in.jpg" class="imageMedia" ></a>
-                    <a class="link" href="https://github.com/login"><img src="img/git.jpg" class="imageMedia" ></a>
-                    <a class="link" href="https://twitter.com/login"><img src="img/twitter.jpg" class="imageMedia"></a>
+                    <a class="link" href="https://www.facebook.com" target="_blank"><img src="img/facebook.jpg" class="imageMedia"></a>
+                    <a class="link" href="https://www.linkedin.com" target="_blank"><img src="img/in.jpg" class="imageMedia" ></a>
+                    <a class="link" href="https://github.com/login" target="_blank"><img src="img/git.jpg" class="imageMedia" ></a>
+                    <a class="link" href="https://twitter.com/login" target="_blank"><img src="img/twitter.jpg" class="imageMedia"></a>
                   
                 </div>
               </div>
@@ -149,7 +150,36 @@
         <div class="txt">We do not share your information.</div>
     </div> -->
 
-
+    <div class="nletterform" style=" margin-top: 0;
+    margin-left: 2%;
+    width: auto;
+    padding: 0 15px;
+    text-align: center;
+    margin-bottom: 2%;">
+        <!-- <h2>  Our Newsletter </h2>   <br> <h3 style="font-weight: 400; text-transform: none; margin-top: 0px;">Subscribe to our page.</h3> -->
+           <!-- <input type="text" placeholder=" Enter your name.." class="nameFoot"> -->
+           <input type="text" placeholder=" Enter Your Email.." class="emailFoot" id="emailfooter" style=" padding: 7px;
+           outline: none;
+           border: 2px solid #ccc;
+           background-color: #11522c;
+           color: #ccc;
+           margin-top: 10px;
+           opacity: .5;
+           margin-left: 2px;
+           width: 20%;
+           border-radius: 0;
+           text-transform: none;">
+           <button onclick="sendMail1()" class="subsNow" style=" padding: 7px;
+           background-color: #1f7041;
+           outline: none;
+           border: 2px solid #ccc;
+           color: #ccc;
+           cursor: pointer;
+           margin-left:0;
+           
+            opacity: .5;"><i class="fa fa-paper-plane"></i></button>
+    
+       </div>
 
     <div class="social"> 
         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -167,12 +197,7 @@
     <a href="contact.html" style="opacity:1;">Contact</a> 
 </li>
 
-<li>
-    <!-- <input type="checkbox" id="toggle" >
-   <label for="toggle"> -->
-    <a href="newsletter.html">Newsletter</a>
  
-</li>
 
 
 <p class="copyright">
@@ -187,5 +212,83 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 <script src="js/contact.js"></script>   
 <script src="js/script.js"></script> 
+<script type="text/javascript"
+ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script>
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+   (function(){
+      emailjs.init("r6RlKGXtEiKGP5a18");
+   })();
+
+   const toName1 = "Mr. / Ms.";
+   const fname1 = "FoodTreep Recipe App";
+   const msg11 = "This is an automated email.";
+
+   function sendMail1(params) {
+    var tempParams = {
+        from_name:fname1,
+        to_name:toName1,
+        message:msg1,
+        to_email:document.getElementById("emailfooter").value,
+    };
+
+    var fname = "Mr. / Ms.";
+    var femail = document.getElementById('emailfooter').value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(femail.match(mailformat)){
+        
+        emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
+             .then(function(res){
+              console.log("success", res.status);
+         
+                //  alert('You have been successfully subscribed!') ;
+         
+        //window.location.reload();
+        // location.reload();
+
+        swal("Sent!", "Thank you for subscribing. Please check your email.", "success");
+        document.getElementById('emailfooter').value='';
+    })
+
+
+    }else{
+        swal("Sorry!", "You have entered an invalid email.", "error");
+    }
+
+
+
+    
+
+    
+   }
+
+
+
+
+// message form functionality
+
+let form = document.getElementById('sheetdb-form');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : 'POST',
+        body: new FormData(document.getElementById('sheetdb-form'))     
+    })
+    .then(res => {
+        return res.json();
+    })
+    .then(swal("Sent!", "Thank you for reaching out.", "success"))
+
+    .then(form.reset())
+ 
+});
+
+
+</script>
 </body>
 </html>

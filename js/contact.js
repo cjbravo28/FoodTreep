@@ -21,22 +21,3 @@ document.querySelector('#search-icon').onclick = () =>{
 document.querySelector('#close').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
 }
-
-// message form functionality
-
-let form = document.getElementById('sheetdb-form');
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(form.action, {
-        method : 'POST',
-        body: new FormData(document.getElementById('sheetdb-form'))     
-    })
-    .then(res => {
-        return res.json();
-    })
-    .then(alert("message sent!"))
-
-    .then(form.reset())
- 
-});
-
