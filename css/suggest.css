@@ -365,12 +365,12 @@ header .icons #menu-bars{
     .navbar-item {position:relative;display:inline}
     .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
     .multiText {  text-align: center;  font-size: 25px; font-weight: 900; margin-top: 25px;}
-    .btnRandomRecipe{
-        margin-top:500px;
-        margin: auto;
-    }
+   
     .dynamicButton{
-       margin-right: 50px;
+       margin-right: 150px;
+        margin-top: 50px; }
+    .cooking{
+        margin-right: 100px;
     }
     
     
