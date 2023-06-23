@@ -418,6 +418,8 @@ html{
 
 
     <title>Kitchen tools Conversion</title>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -489,12 +491,33 @@ html{
     bottom: 0;
     width: 100%;
     /* Height of the footer*/
-    height: 110px;">
+    height: 280px;">
   
+  <div class="nletterform" style="  margin-top: 0;
+  margin-left: 2%;
+  width: auto;
+  padding: 0 15px;
+  text-align: center;
+  margin-bottom: 2%;">
+    <!-- <h2>  Our Newsletter </h2>   <br> <h3 style="font-weight: 400; text-transform: none; margin-top: 0px;">Subscribe to our page.</h3> -->
+       <!-- <input type="text" placeholder=" Enter your name.." class="nameFoot"> -->
+       <input type="text" placeholder=" Enter Your Email.." class="emailFoot" id="emailfooter" style="padding: 7px;
+       outline: none;
+       border: 2px solid #ccc;
+       background-color: #11522c;
+       color: #ccc;
+       margin-top: 10px;
+       opacity: .5;
+       margin-left: 2px;
+       width: 20%;
+       text-transform: none;">
+       <button onclick="sendMail1()" class="subsNow"><i class="fa fa-paper-plane"></i></button>
+  
+   </div>
    
   
   
-      <div class="social"> 
+      <div class="social" style="margin-top: 10px;"> 
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -510,12 +533,7 @@ html{
       <a href="contact.html">Contact</a> 
   </li>
   
-  <li>
-      <!-- <input type="checkbox" id="toggle" >
-     <label for="toggle"> -->
-      <a href="newsletter.html">Newsletter</a>
-   
-  </li>
+
   
   
   <p class="copyright" style="font-size: 12px;">
@@ -527,7 +545,9 @@ html{
     </div>
 
 
-
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+   </script>
 
 
 
@@ -548,11 +568,11 @@ let result = document.getElementById("result");
 teaspoonBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
-    alert('enter a number')
+    swal("Sorry!", "Please enter a number!", "error");
     // document.getElementById('alert').innerText = `Enter a Number!`
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
-    alert('enter a number greater than zero')
+    swal("Sorry!", "Number must be greater than zero.", "error");
     // document.getElementById('alert').innerText = `Enter a number greater than zero!`
     qtinput.value = "";
 }
@@ -566,12 +586,12 @@ qtinput.value = "";
 tablespoonBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
-    alert('enter a number')
+    swal("Sorry!", "Please enter a number!", "error");
     // document.getElementById('alert').innerText = `Enter a Number!`
     
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
-    alert('enter a number greater than zero')
+    swal("Sorry!", "Number must be greater than zero.", "error");
     
     // document.getElementById('alert').innerText = `Enter a number greater than zero!`
 
@@ -588,11 +608,12 @@ qtinput.value = "";
 cupBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
-    alert('enter a number')
+    swal("Sorry!", "Please enter a number!", "error");
     // document.getElementById('alert').innerText = `Enter a Number!`
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
-    alert('enter a number greater than zero')
+    // alert('enter a number greater than zero')
+    swal("Sorry!", "Number must be greater than zero.", "error");
     
     // document.getElementById('alert').innerText = `Enter a number greater than zero!`
 
@@ -609,11 +630,12 @@ qtinput.value = "";
 gallonBtn.addEventListener( 'click' , function() {
 
 if(qtinput.value == ""){
-    alert('enter a number')
+    swal("Sorry!", "Please enter a number!", "error");
     // document.getElementById('alert').innerText = `Enter a Number!`
 }
 else if(qtinput.value < 0 || qtinput.value == 0){
-    alert('enter a number greater than zero')
+    // alert('enter a number greater than zero')
+    swal("Sorry!", "Number must be greater than zero.", "error");
     
     // document.getElementById('alert').innerText = `Enter a number greater than zero!`
 
@@ -626,6 +648,57 @@ qtinput.value = "";
 }
 
 });
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+(function(){
+      emailjs.init("r6RlKGXtEiKGP5a18");
+   })();
+
+   const toName1 = "Mr. / Ms.";
+   const fname12 = "FoodTreep Recipe App";
+   const msg11 = "This is an automated email.";
+
+   function sendMail1(params) {
+    var tempParams = {
+        from_name:fname12,
+        to_name:toName1,
+        message:msg11,
+        to_email:document.getElementById("emailfooter").value,
+    };
+
+    var fname = "Mr. / Ms.";
+    var femail = document.getElementById('emailfooter').value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(femail.match(mailformat)){
+        
+        emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
+             .then(function(res){
+              console.log("success", res.status);
+         
+                //  alert('You have been successfully subscribed!') ;
+         
+        //window.location.reload();
+        // location.reload();
+
+        swal("Sent!", "Thank you for subscribing. Please check your email.", "success");
+        document.getElementById('emailfooter').value='';
+    })
+
+
+    }else{
+        swal("Sorry!", "You have entered an invalid email.", "error");
+    }
+    
+   }
+
+
 </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="kTool.js"></script>   

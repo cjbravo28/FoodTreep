@@ -112,7 +112,7 @@ async function showMealDetails(id) {
     let html="";
     await fetchMealsFromApi(url,id).then(data=>{
         html += `
-          <div id="meal-details" class="mb-5" style="background-color: #d7ecdc; color: #0b0b0b ">
+          <div id="meal-details" class="mb-5" style="background-color: #d7ecdc; color: #0b0b0b; width: auto; ">
             <div id="closing1" class="closing"> &#10005; </div>
             <div id="meal-header" class="d-flex justify-content-around ">
               <div id="meal-thumbail" style="margin-top:5%">
@@ -120,7 +120,7 @@ async function showMealDetails(id) {
               </div>
               <div id="details" style="justify-content: center;
               text-align: center;
-              margin-top: 5%; margin-left:5%;">
+              margin-top: 5%; margin-left:5%; ">
                 <h3>${data.meals[0].strMeal}</h3><br>
                 <h6>Category : ${data.meals[0].strCategory}</h6>
                 <h6>Area : ${data.meals[0].strArea}</h6><br>

@@ -426,8 +426,14 @@ header .navbar12 a{
   bottom: 0;
   width: 100%;
   /* Height of the footer*/
-  height: 110px;">
+  height: 180px;">
+<div class="nletterform">
+  <!-- <h2>  Our Newsletter </h2>   <br> <h3 style="font-weight: 400; text-transform: none; margin-top: 0px;">Subscribe to our page.</h3> -->
+     <!-- <input type="text" placeholder=" Enter your name.." class="nameFoot"> -->
+     <input type="text" placeholder=" Enter Your Email.." class="emailFoot" id="emailfooter">
+     <button onclick="sendMail1()" class="subsNow"><i class="fa fa-paper-plane"></i></button>
 
+ </div>
  
 
 
@@ -447,12 +453,7 @@ header .navbar12 a{
     <a href="contact.html">Contact</a> 
 </li>
 
-<li>
-    <!-- <input type="checkbox" id="toggle" >
-   <label for="toggle"> -->
-    <a href="newsletter.html">Newsletter</a>
  
-</li>
 
 
 <p class="copyright">
@@ -483,7 +484,9 @@ header .navbar12 a{
  <script src="js/print.js"></script>
  <script src="js/html2canvas.js"></script>
  
-
+ <script type="text/javascript"
+ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
  
 
   <!-- link to js -->
@@ -572,6 +575,51 @@ function addRemoveToFavList(id) {
 showFavMealList();
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+(function(){
+      emailjs.init("r6RlKGXtEiKGP5a18");
+   })();
+
+   const toName1 = "Mr. / Ms.";
+   const fname12 = "FoodTreep Recipe App";
+   const msg11 = "This is an automated email.";
+
+   function sendMail1(params) {
+    var tempParams = {
+        from_name:fname12,
+        to_name:toName1,
+        message:msg11,
+        to_email:document.getElementById("emailfooter").value,
+    };
+
+    var fname = "Mr. / Ms.";
+    var femail = document.getElementById('emailfooter').value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(femail.match(mailformat)){
+        
+        emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
+             .then(function(res){
+              console.log("success", res.status);
+         
+                //  alert('You have been successfully subscribed!') ;
+         
+        //window.location.reload();
+        // location.reload();
+
+        swal("Sent!", "Thank you for subscribing. Please check your email.", "success");
+        document.getElementById('emailfooter').value='';
+    })
+
+
+    }else{
+        swal("Sorry!", "You have entered an invalid email.", "error");
+    }
+    
+   }
+
 
  
 
@@ -593,6 +641,9 @@ window.onscroll = () => {
 }
  
   
+
+
+
 
   </script>
  

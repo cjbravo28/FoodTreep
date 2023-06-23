@@ -200,3 +200,137 @@ form  .btn button{
     
     }
 
+
+    .rowCol{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+
+    .nletterform{
+        margin-top: 0;
+        margin-left: 2%;
+        width: auto;
+        padding: 0 15px;
+        text-align: center;
+        margin-bottom: 2%;
+         
+    }
+
+.nletterform h2, .nletterform h3{
+    color: #ccc;
+    opacity: .5;
+}
+
+/* .nletterform .nameFoot{
+    padding: 8px;
+    outline: none;
+    border: 2px solid #ccc;
+    background-color: #11522c;
+    color: #ccc;
+    margin-top: 10px;
+    opacity: .5;
+    margin-left: 2px;
+    width: 13%;
+
+} */
+
+.nletterform .emailFoot{
+    padding: 7px;
+    outline: none;
+    border: 2px solid #ccc;
+    background-color: #11522c;
+    color: #ccc;
+    margin-top: 10px;
+    opacity: .5;
+    margin-left: 2px;
+    width: 20%;
+    text-transform: none;
+    
+
+}
+
+.nletterform .subsNow{
+    padding: 7px;
+    background-color: #1f7041;
+    outline: none;
+    border: 2px solid #ccc;
+    color: #ccc;
+    cursor: pointer;
+    margin-left:0;
+    
+     opacity: .5;
+}
+
+.nletterform .subsNow:hover{
+    padding: 8px;
+    background-color: #289153;
+    outline: none;
+    border: 2px solid #ccc;
+    color: #ccc;
+    cursor: pointer;
+    margin-left: 0;
+    font-weight: 700;
+    opacity: 1;
+}
+ 
+
+
+
+@media(max-width:1060px){
+    .nletterform .emailFoot{
+        width: 25%;
+    }
+}
+
+
+@media(max-width:904px){
+    .nletterform .emailFoot{
+        width: 25%;
+    }
+}
+
+@media(max-width:794px){
+    .nletterform .emailFoot{
+        width: 30%;
+    }
+}
+
+@media(max-width:692px){
+    .nletterform .emailFoot{
+        width: 35%;
+    }
+}
+
+@media(max-width:595px){
+    .nletterform .emailFoot{
+        width: 40%;
+    }
+}
+
+
+@media(max-width:525px){
+    .nletterform .emailFoot{
+        width: 50%;
+    }
+}
+
+@media(max-width:444px){
+    .nletterform .emailFoot{
+        width: 55%;
+    }
+}
+
+@media(max-width:377px){
+    .nletterform .emailFoot{
+        width: 55%;
+    }
+}
+
+
+@media(max-width:320px){
+    .nletterform .emailFoot{
+        width: 65%;
+    }
+}

@@ -293,7 +293,7 @@
  
    </style>
 
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Food Treep - Cooking made easy for you.</title>
 </head>
 
@@ -694,8 +694,11 @@
   
 
 <section class="footer">
+    
+    <div class="rowCol"></div>
+    
 
-
+     
     <!-- <div class="news">
         <label for="toggle" class="cancel-btn"><i class="fas fa-times"></i></label>
         <div class="iconNew"><i class="far fa-envelope"></i></div>
@@ -715,14 +718,24 @@
     
         <div class="txt">We do not share your information.</div>
     </div> -->
+    <div class="nletterform">
+        <!-- <h2>  Our Newsletter </h2>   <br> <h3 style="font-weight: 400; text-transform: none; margin-top: 0px;">Subscribe to our page.</h3> -->
+           <!-- <input type="text" placeholder=" Enter your name.." class="nameFoot"> -->
+           <input type="text" placeholder=" Enter Your Email.." class="emailFoot" id="emailfooter">
+           <button onclick="sendMail1()" class="subsNow"><i class="fa fa-paper-plane"></i></button>
+    
+       </div>
 
 
 
+     
     <div class="social"> 
         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     </div>
+</div>
+
 
 
     <ul class="list">
@@ -734,12 +747,12 @@
     <a href="contact.html">Contact</a> 
 </li>
 
-<li>
-    <!-- <input type="checkbox" id="toggle" >
-   <label for="toggle"> -->
+<!-- <li>
+     <input type="checkbox" id="toggle" >
+   <label for="toggle"> 
     <a href="newsletter.html">Newsletter</a>
  
-</li>
+</li> -->
 
 
 <p class="copyright">
@@ -747,6 +760,8 @@
 </p>
 
     </ul>
+
+    
 
 </section>
 
@@ -839,7 +854,7 @@ $(document).ready(function(){
     var femail = document.getElementById('toEmail').value;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if(fname.trim().length!==0 && femail.match(mailformat) ){
+    if(fname.trim().length!==0 && femail.match(mailformat)){
         
         emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
              .then(function(res){
@@ -870,10 +885,55 @@ $(document).ready(function(){
    }
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+   (function(){
+      emailjs.init("r6RlKGXtEiKGP5a18");
+   })();
+
+   const toName1 = "Mr. / Ms.";
+   const fname1 = "FoodTreep Recipe App";
+   const msg11 = "This is an automated email.";
+
+   function sendMail1(params) {
+    var tempParams = {
+        from_name:fname1,
+        to_name:toName1,
+        message:msg1,
+        to_email:document.getElementById("emailfooter").value,
+    };
+
+    var fname = "Mr. / Ms.";
+    var femail = document.getElementById('emailfooter').value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(femail.match(mailformat)){
+        
+        emailjs.send('service_fozmf55','template_8ysf2bk',tempParams)
+             .then(function(res){
+              console.log("success", res.status);
+         
+                //  alert('You have been successfully subscribed!') ;
+         
+        //window.location.reload();
+        // location.reload();
+
+        swal("Sent!", "Thank you for subscribing. Please check your email.", "success");
+        document.getElementById('emailfooter').value='';
+    })
+
+
+    }else{
+        swal("Sorry!", "You have entered an invalid email.", "error");
+    }
 
 
 
+    
 
+    
+   }
 
 
 
