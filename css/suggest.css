@@ -166,7 +166,7 @@ header .icons #menu-bars{
     color: rgb(99, 4, 4);
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
-    font-size: 80px;
+    font-size: 100px;
   
 
 }
@@ -350,7 +350,7 @@ header .icons #menu-bars{
     .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
     .multiText {  text-align: center;  font-size: 25px; font-weight: 900; margin-bottom: 50px;}
     .btnRandomRecipe{
-        margin-top:100px;
+        margin-top:500px;
         margin: auto;
     }
     .dynamicButton{
@@ -366,7 +366,7 @@ header .icons #menu-bars{
     .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
     .multiText {  text-align: center;  font-size: 25px; font-weight: 900; margin-top: 25px;}
     .btnRandomRecipe{
-        margin-top:100px;
+        margin-top:500px;
         margin: auto;
     }
     .dynamicButton{
