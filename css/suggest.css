@@ -350,14 +350,73 @@ header .icons #menu-bars{
     .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
     .multiText { font-size: 25px; font-weight: 900; margin-bottom: 50px; margin-top:80px;}
     .btnRandomRecipe{
-        margin: auto;
-        margin-right: 50px;
+        margin-left: 50px;
+        margin-right: 30px;
     }
   
     
     
 }
-@media (min-width: 300px){
+
+@media (max-width: 801px){
+    .navbar-list {list-style:none}
+    .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 10px;text-decoration: none;color:black}
+    .navbar-item {position:relative;display:inline}
+    .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
+    .multiText { font-size: 25px; font-weight: 900; margin-bottom: 50px; margin-top:80px;}
+    .btnRandomRecipe{
+        margin-left: 50px;
+        margin-right: 30px;
+    }
+  
+    .dynamicButton{
+        margin-right: 150px;
+         margin-top: 210px; }
+        .dynamicTitle{
+            margin-left: 0px;
+        }
+    .cooking{
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 399px){
+    .navbar-list {list-style:none}
+    .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 10px;text-decoration: none;color:black}
+    .navbar-item {position:relative;display:inline}
+    .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
+    .multiText { font-size: 25px; font-weight: 900; margin-bottom: 50px; margin-top:80px;}
+    .btnRandomRecipe{
+        margin-left: 50px;
+        margin-right: 30px;
+    }
+  
+    .dynamicButton{
+        margin-right: 150px;
+         margin-top: 20px; }
+    
+    
+}
+
+@media (max-width: 396px){
+    .navbar-list {list-style:none}
+    .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 10px;text-decoration: none;color:black}
+    .navbar-item {position:relative;display:inline}
+    .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 500;letter-spacing: .1rem;margin-right: 35px;}
+    .multiText { font-size: 25px; font-weight: 900; margin-bottom: 50px; margin-top:80px;}
+    .btnRandomRecipe{
+        margin-left: 50px;
+        margin-right: 30px;
+    }
+  
+    .dynamicButton{
+        margin-right: 150px;
+         margin-top: 20px; }
+    
+    
+}
+
+@media (max-width: 300px){
     .navbar-list {list-style:none}
     .navbar-link-category {text-transform: uppercase;font-weight: 500;margin-right: 10px;text-decoration: none;color:black}
     .navbar-item {position:relative;display:inline}
@@ -366,7 +425,7 @@ header .icons #menu-bars{
    
     .dynamicButton{
        margin-right: 150px;
-        margin-top: 50px; }
+        margin-top: 20px; }
     .cooking{
         margin-right: 100px;
     }
