@@ -11,9 +11,9 @@
     -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <!-- fonts awesome-->
-
-
+    <!--
+        fonts awesome
+    -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--
         css
@@ -25,8 +25,6 @@
     <!--
         custom js
     -->
-
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500&display=swap');
 
@@ -220,7 +218,8 @@ box-shadow: 5px 5px rgb(117, 176, 145);
 .btn{
 display: flex;
 }
-.container button{
+
+button .container{
 margin: 50px 10px;
 width: auto;
 padding: 15px 20px;
@@ -230,7 +229,9 @@ cursor: pointer;
 box-shadow: 1px 1px rgb(236, 155, 155);
 font-weight: bold;
 }
-.container input{
+
+
+input .container{
 padding: 20px 20px;
 border-radius: 5px;
 margin: 5px auto;
@@ -309,7 +310,7 @@ box-shadow: 5px 5px rgb(117, 176, 145);
 .btn{
 display: flex;
 }
-.container button{
+button .container{
 margin: 45px 6px;
 width: auto;
 padding: 12px 18px;
@@ -319,7 +320,7 @@ cursor: pointer;
 box-shadow: 1px 1px rgb(236, 155, 155);
 font-weight: bold;
 }
-.container input{
+input .container{
 padding: 18px 18px;
 border-radius: 5px;
 margin: 5px auto;
@@ -348,7 +349,7 @@ box-shadow: 5px 5px rgb(117, 176, 145);
 .btn{
 display: flex;
 }
-.container button{
+button .container{
 margin: 35px 4px;
 width: auto;
 padding: 8px 16px;
@@ -358,7 +359,7 @@ cursor: pointer;
 box-shadow: 1px 1px rgb(236, 155, 155);
 font-weight: bold;
 }
-.container input{
+input .container{
 padding: 12px 12px;
 border-radius: 5px;
 margin: 5px auto;
@@ -387,7 +388,7 @@ box-shadow: 5px 5px rgb(117, 176, 145);
 .btn{
 display: flex;
 }
-.container button{
+button .container{
 margin: 40px 2px;
 width: auto;
 padding: 4px 8px;
@@ -397,7 +398,7 @@ cursor: pointer;
 box-shadow: 1px 1px rgb(236, 155, 155);
 font-weight: bold;
 }
-.container input{
+input .container{
 padding: 8px 8px;
 border-radius: 5px;
 margin: 5px auto;
@@ -419,20 +420,17 @@ html{
 }
 
 
-.nletterform .button:hover{
+.nletterform .subsNow:hover{
     padding: 8px;
-    background-color: #38bd6f;
+    background-color: #38bd6f !important;
     outline: none;
     border: 2px solid #ccc;
-    color: #ccc;
+    color: #fff;
     cursor: pointer;
      
     font-weight: 700;
-    opacity: 1;
+     
 }
-
-
-
     </style>
 
 
@@ -500,22 +498,22 @@ html{
     </main>
 
 
-    <!-- <div style="margin-top: 120px ;
+    <div style="margin-top: 120px ;
     margin-bottom: 80px;">
   
-    </div> -->
+    </div>
     <br>
     <div class="footer" style="position: relative;
     padding: 10px 10px 0px 10px;
-    bottom: -2em;
+    bottom: 0;
     width: 100%;
-  
-   ">
+    /* Height of the footer*/
+    height: 280px;">
   
   <div class="nletterform" style="  margin-top: 0;
   margin-left: 2%;
   width: auto;
-  padding: 0 15px; 
+  padding: 0 15px;
   text-align: center;
   margin-bottom: 2%;">
     <!-- <h2>  Our Newsletter </h2>   <br> <h3 style="font-weight: 400; text-transform: none; margin-top: 0px;">Subscribe to our page.</h3> -->
@@ -530,8 +528,7 @@ html{
        margin-left: 2px;
        width: 20%;
        text-transform: none;
-       border-radius: 0;
-    "> 
+       border-radius: 0;">
        <button onclick="sendMail1()" class="subsNow" style="padding: 7px;
        background-color: #1f7041;
        outline: none;
@@ -540,14 +537,13 @@ html{
        cursor: pointer;
        margin-left:0;
        border-radius: 0;
-      ;
         opacity: .5;"><i class="fa fa-paper-plane"></i></button>
   
    </div>
    
   
   
-      <div class="social" style="margin-top: 10px;" > 
+      <div class="social" style="margin-top: 0px;"> 
         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
